@@ -1,0 +1,181 @@
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon {
+    margin-bottom: 20px
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon {
+    position: relative;
+    display: inline-block;
+    padding: 30px 0 0 20px;
+    z-index: 1
+}
+
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper,
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text,
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon {
+    padding-left: 0;
+    padding-right: 20px
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::before,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::before,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::before,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::after,
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::after,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    z-index: -1;
+    background-color: var(--pbmit-helopizza-white-color);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%
+}
+
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::before,
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::before,
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::before,
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::after,
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::after,
+body.rtl .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::after {
+    left: inherit;
+    right: 0
+}
+
+.pbmit-elementor-bg-color-white .pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::before,
+.pbmit-elementor-bg-color-white .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::before,
+.pbmit-elementor-bg-color-white .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::before,
+.pbmit-elementor-bg-color-white .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::after,
+.pbmit-elementor-bg-color-white .pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::after,
+.pbmit-elementor-bg-color-white .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::after {
+    background-color: var(--pbmit-helopizza-light-bg-color)
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::before,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::before,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::before {
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--pbmit-helopizza-global-color)!important
+}
+
+.pbmit-elementor-bg-color-gradient .pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::before,
+.pbmit-elementor-bg-color-globalcolor .pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::before,
+.pbmit-elementor-bg-color-gradient .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::before,
+.pbmit-elementor-bg-color-globalcolor .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::before,
+.pbmit-elementor-bg-color-gradient .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::before,
+.pbmit-elementor-bg-color-globalcolor .pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::before {
+    background-color: var(--pbmit-helopizza-blackish-bg-color)!important
+}
+
+.pbmit-ihbox-style-12:hover .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::before,
+.pbmit-ihbox-style-12:hover .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::before,
+.pbmit-ihbox-style-12:hover .pbmit-ihbox-icon .pbmit-icon-type-icon::before {
+    width: 60px;
+    opacity: 1;
+    visibility: visible
+}
+
+.pbmit-ihbox-style-12:hover .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::after,
+.pbmit-ihbox-style-12:hover .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::after,
+.pbmit-ihbox-style-12:hover .pbmit-ihbox-icon .pbmit-icon-type-icon::after {
+    width: 0;
+    opacity: 0;
+    visibility: hidden
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::before,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::before,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::before,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::after,
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper::after,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon .pbmit-icon-type-icon::after,
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper svg,
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper,
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon-type-text,
+.pbmit-ihbox-style-12 .pbmit-icon-type-icon,
+.pbmit-ihbox-style-12 {
+    -webkit-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s
+}
+
+.pbmit-ihbox-style-12:hover {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px)
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon-type-image img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon-type-text,
+.pbmit-ihbox-style-12 .pbmit-icon-type-icon {
+    font-size: 50px;
+    line-height: 50px;
+    color: var(--pbmit-helopizza-secondary-color)
+}
+
+.pbmit-elementor-bg-color-secondary .pbmit-ihbox-style-12 .pbmit-ihbox-icon-type-text,
+.pbmit-elementor-bg-color-secondary .pbmit-ihbox-style-12 .pbmit-icon-type-icon {
+    color: var(--pbmit-helopizza-blackish-color)
+}
+
+.pbmit-ihbox-style-12 .pbmit-icon-type-icon i:not(.pbmit-helopizza-icon) {
+    margin-bottom: 8px
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-icon-type-text {
+    font-weight: 700
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper svg {
+    width: 50px;
+    fill: var(--pbmit-helopizza-secondary-color)
+}
+
+.pbmit-elementor-bg-color-secondary .pbmit-ihbox-style-12 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper svg {
+    fill: var(--pbmit-helopizza-blackish-color)
+}
+
+.pbmit-ihbox-style-12 .pbmit-element-subtitle,
+.pbmit-ihbox-style-12 .pbmit-element-heading {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 0;
+    color: var(--pbmit-helopizza-secondary-color)
+}
+
+.pbmit-elementor-bg-color-secondary .pbmit-ihbox-style-12 .pbmit-element-subtitle,
+.pbmit-elementor-bg-color-secondary .pbmit-ihbox-style-12 .pbmit-element-heading {
+    color: var(--pbmit-helopizza-global-color)
+}
+
+.pbmit-ihbox-style-12 .pbmit-element-title {
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 0
+}
+
+.pbmit-ihbox-style-12 .pbmit-ihbox-btn a {
+    margin-top: 15px;
+    display: inline-block
+}
+
+.pbmit-element-miconheading-style-12.pbmit-element-viewtype-carousel .pbmit-miconheading-style-12 {
+    padding-top: 10px
+}

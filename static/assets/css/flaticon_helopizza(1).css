@@ -1,0 +1,276 @@
+@font-face {
+    font-family: "flaticon_dilicious";
+    src: url("./flaticon_dilicious.ttf?c90d69f24c79637522f6ee3f202f1dac") format("truetype"), url("./flaticon_dilicious.woff?c90d69f24c79637522f6ee3f202f1dac") format("woff"), url("./flaticon_dilicious.woff2?c90d69f24c79637522f6ee3f202f1dac") format("woff2"), url("./flaticon_dilicious.eot?c90d69f24c79637522f6ee3f202f1dac#iefix") format("embedded-opentype"), url("./flaticon_dilicious.svg?c90d69f24c79637522f6ee3f202f1dac#flaticon_dilicious") format("svg");
+}
+
+i[class^="flaticon_dilicious-"]:before,
+i[class*=" pbmit-helopizza-icon-"]:before {
+    font-family: flaticon_dilicious !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pbmit-helopizza-icon-food-and-restaurant:before {
+    content: "\f101";
+}
+
+.pbmit-helopizza-icon-food-truck:before {
+    content: "\f102";
+}
+
+.pbmit-helopizza-icon-lunch-bag:before {
+    content: "\f103";
+}
+
+.pbmit-helopizza-icon-store:before {
+    content: "\f104";
+}
+
+.pbmit-helopizza-icon-menu:before {
+    content: "\f105";
+}
+
+.pbmit-helopizza-icon-order-food:before {
+    content: "\f106";
+}
+
+.pbmit-helopizza-icon-food:before {
+    content: "\f107";
+}
+
+.pbmit-helopizza-icon-soda:before {
+    content: "\f108";
+}
+
+.pbmit-helopizza-icon-hamburger:before {
+    content: "\f109";
+}
+
+.pbmit-helopizza-icon-hamburger-1:before {
+    content: "\f10a";
+}
+
+.pbmit-helopizza-icon-burger:before {
+    content: "\f10b";
+}
+
+.pbmit-helopizza-icon-burger-1:before {
+    content: "\f10c";
+}
+
+.pbmit-helopizza-icon-food-container:before {
+    content: "\f10d";
+}
+
+.pbmit-helopizza-icon-drone:before {
+    content: "\f10e";
+}
+
+.pbmit-helopizza-icon-map:before {
+    content: "\f10f";
+}
+
+.pbmit-helopizza-icon-hamburger-2:before {
+    content: "\f110";
+}
+
+.pbmit-helopizza-icon-ice-cream:before {
+    content: "\f111";
+}
+
+.pbmit-helopizza-icon-french-fries:before {
+    content: "\f112";
+}
+
+.pbmit-helopizza-icon-pizza:before {
+    content: "\f113";
+}
+
+.pbmit-helopizza-icon-taco:before {
+    content: "\f114";
+}
+
+.pbmit-helopizza-icon-french-fries-1:before {
+    content: "\f115";
+}
+
+.pbmit-helopizza-icon-food-delivery:before {
+    content: "\f116";
+}
+
+.pbmit-helopizza-icon-soda-1:before {
+    content: "\f117";
+}
+
+.pbmit-helopizza-icon-burrito:before {
+    content: "\f118";
+}
+
+.pbmit-helopizza-icon-sausage:before {
+    content: "\f119";
+}
+
+.pbmit-helopizza-icon-fast-food:before {
+    content: "\f11a";
+}
+
+.pbmit-helopizza-icon-food-delivery-1:before {
+    content: "\f11b";
+}
+
+.pbmit-helopizza-icon-ice-cream-1:before {
+    content: "\f11c";
+}
+
+.pbmit-helopizza-icon-pizza-slice:before {
+    content: "\f11d";
+}
+
+.pbmit-helopizza-icon-nachos:before {
+    content: "\f11e";
+}
+
+.pbmit-helopizza-icon-eating:before {
+    content: "\f11f";
+}
+
+.pbmit-helopizza-icon-customer-service:before {
+    content: "\f120";
+}
+
+.pbmit-helopizza-icon-delivery-man:before {
+    content: "\f121";
+}
+
+.pbmit-helopizza-icon-route:before {
+    content: "\f122";
+}
+
+.pbmit-helopizza-icon-discount:before {
+    content: "\f123";
+}
+
+.pbmit-helopizza-icon-pizza-1:before {
+    content: "\f124";
+}
+
+.pbmit-helopizza-icon-delivery-man-1:before {
+    content: "\f125";
+}
+
+.pbmit-helopizza-icon-pizza-2:before {
+    content: "\f126";
+}
+
+.pbmit-helopizza-icon-good-review:before {
+    content: "\f127";
+}
+
+.pbmit-helopizza-icon-food-delivery-2:before {
+    content: "\f128";
+}
+
+.pbmit-helopizza-icon-food-1:before {
+    content: "\f129";
+}
+
+.pbmit-helopizza-icon-quality:before {
+    content: "\f12a";
+}
+
+.pbmit-helopizza-icon-sushi:before {
+    content: "\f12b";
+}
+
+.pbmit-helopizza-icon-sushi-1:before {
+    content: "\f12c";
+}
+
+.pbmit-helopizza-icon-cupcake:before {
+    content: "\f12d";
+}
+
+.pbmit-helopizza-icon-ice-cream-2:before {
+    content: "\f12e";
+}
+
+.pbmit-helopizza-icon-fast-food-1:before {
+    content: "\f12f";
+}
+
+.pbmit-helopizza-icon-fried-potatoes:before {
+    content: "\f130";
+}
+
+.pbmit-helopizza-icon-shrimp:before {
+    content: "\f131";
+}
+
+.pbmit-helopizza-icon-lobster:before {
+    content: "\f132";
+}
+
+.pbmit-helopizza-icon-broccoli:before {
+    content: "\f133";
+}
+
+.pbmit-helopizza-icon-cheese:before {
+    content: "\f134";
+}
+
+.pbmit-helopizza-icon-cake:before {
+    content: "\f135";
+}
+
+.pbmit-helopizza-icon-birthday:before {
+    content: "\f136";
+}
+
+.pbmit-helopizza-icon-order-food-1:before {
+    content: "\f137";
+}
+
+.pbmit-helopizza-icon-food-app:before {
+    content: "\f138";
+}
+
+.pbmit-helopizza-icon-delivery-man-2:before {
+    content: "\f139";
+}
+
+.pbmit-helopizza-icon-smartphone:before {
+    content: "\f13a";
+}
+
+.pbmit-helopizza-icon-delivery-bike:before {
+    content: "\f13b";
+}
+
+.pbmit-helopizza-icon-tracking:before {
+    content: "\f13c";
+}
+
+.pbmit-helopizza-icon-support:before {
+    content: "\f13d";
+}
+
+.pbmit-helopizza-icon-food-delivery-3:before {
+    content: "\f13e";
+}
+
+.pbmit-helopizza-icon-phone-call:before {
+    content: "\f13f";
+}
+
+.pbmit-helopizza-icon-pin:before {
+    content: "\f140";
+}
+
+.pbmit-helopizza-icon-mail:before {
+    content: "\f141";
+}
