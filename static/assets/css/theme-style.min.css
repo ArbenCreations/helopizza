@@ -111,8 +111,8 @@
 
 .pbmit-title-bar-wrapper,
 .pbmit-title-bar-wrapper.pbmit-bg-color-custom:before {
-    background-color: #000c17;
-    background-image: url(https://helopizza-demo.pbminfotech.com/italian-food/wp-content/uploads/sites/4/2023/03/italian-title-bg-new.png);
+    background-color: var(--pbmit-helopizza-global-color);
+    background-image: url(../media/titlebar-pattern.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
