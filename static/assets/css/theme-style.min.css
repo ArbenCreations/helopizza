@@ -1,13 +1,13 @@
 :root {
-    --pbmit-helopizza-global-color: #b80818;
+    --pbmit-helopizza-global-color: #5e0009;
     --pbmit-helopizza-secondary-color: #ffb200;
-    --pbmit-helopizza-gradient-color-first: #b80818;
+    --pbmit-helopizza-gradient-color-first: #5e0009;
     --pbmit-helopizza-gradient-color-last: rgba(184, 8, 24, .87);
     --pbmit-helopizza-logo-height: 50px;
     --pbmit-helopizza-sticky-logo-height: 50px;
     --pbmit-helopizza-responsive-logo-height: 50px;
     --pbmit-helopizza-link-color-normal: #282932;
-    --pbmit-helopizza-link-color-hover: #b80818;
+    --pbmit-helopizza-link-color-hover: #5e0009;
     --pbmit-helopizza-body-bg-color: #f7f1e8;
     --pbmit-helopizza-white-color: #fff;
     --pbmit-helopizza-light-bg-color: #f7f1e8;

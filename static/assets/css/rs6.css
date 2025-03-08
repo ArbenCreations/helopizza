@@ -944,7 +944,7 @@ rs-fullwidth-wrap {
 }
 
 .rs-parallax-wrap {
-    background-color: var(--pbmit-dilicious-global-color);
+    /* background-color: var(--pbmit-dilicious-global-color); */
 }
 
 rs-column-wrap .rs-parallax-wrap {
