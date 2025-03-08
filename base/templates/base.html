@@ -632,8 +632,11 @@
 
                                                             <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14"><a href="#">Food items</a>
                                                                 <ul class="sub-menu">
-                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2091"><a href="">Popular Basic Pizza Items</a></li>
-                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2092"><a href="">Popular Vegetarian Pizza Items</a></li>
+                                                                    {% for category in categories %}
+
+                                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2091"><a href="{% url "food" cid=category.id categoryName=category.name %}">{{category.name}}</a></li>
+                                                                    {% endfor %}
+                                                                    {% comment %} <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2092"><a href="">Popular Vegetarian Pizza Items</a></li>
                                                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2093"><a href="">Popular Meat Pizza Items</a></li>
                                                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2094"><a href="">Popular Chicken Pizza Items</a></li>
                                                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2090"><a href="">Popular Burgur Items</a></li>
@@ -641,7 +644,7 @@
                                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2234"><a href="">Poutines</a></li>
                                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2262"><a href="">Desert</a></li>
                                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2308"><a href="">Sides</a></li>
-                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2324"><a href="">Salad</a></li>
+                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2324"><a href="">Salad</a></li> {% endcomment %}
                                                                 </ul>
                                                             </li>
                                                             <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="{% url "menu" %}">Food Menu</a></li>
@@ -725,6 +728,7 @@
                                     <h2 class="widget-title">Our Company</h2>
                                     <div class="menu-company-container">
                                         <ul id="menu-company" class="menu">
+                                            
                                             <li id="menu-item-499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-499"><a href="#">Blogs</a></li>
                                             <li id="menu-item-495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-495"><a href="#">FAQ</a></li>
                                             <li id="menu-item-500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-500"><a href="#">Reservation</a></li>

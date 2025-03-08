@@ -1,0 +1,223 @@
+{% extends "base.html" %} {% load static %} {% block pageCSS %}
+<link rel='stylesheet' href='{% static ' assets/css/post-389.css ' %}' media='all' />
+<link rel='stylesheet' href='{% static ' assets/css/icon-heading-style-6.min.css ' %}' media='all' />
+<link rel='stylesheet' href='{% static ' assets/css/icon-heading-style-15.min.css ' %}' media='all' />
+<style>
+    .woocommerce-Price-amount {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-right: 10px;
+    }
+    
+    .price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .woocommerce-Price-amount bdi {
+        display: inline-block;
+    }
+    /* Discount Percentage Styling */
+    
+    .discount-percentage {
+        {
+            % comment %
+        }
+        color: #ff0000;
+        /* Red color for discount */
+        {
+            % endcomment %
+        }
+        font-weight: bold;
+        font-size: 16px;
+        margin-right: 8px;
+        background:#ff5722;
+        color: #fff;
+        padding:5px;
+    }
+    /* Discounted Price Styling */
+    
+    .discounted-price {
+        color: #ff5722;
+        /* Orange color for discounted price */
+        font-weight: bold;
+        font-size: 20px;
+    }
+    /* Original Price Styling (Strikethrough) */
+    
+    .original-price bdi {
+        color: #888;
+        text-decoration: line-through !important;
+        font-size: 18px;
+    }
+    
+    .label {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: red
+    }
+    
+    .label.vegge {
+        background: green;
+    }
+    
+    ul.products {
+        display: grid !important;
+        grid-template-columns: repeat(4, 300px) !important;
+        justify-content: space-between;
+    }
+    
+    ul.products::before {
+        display: none !important;
+    }
+    
+    li.product {
+        width: 300px !important;
+    }
+    
+    @media screen and (max-width:900px) {
+        ul.products {
+            display: grid !important;
+            grid-template-columns: repeat(3, 200px) !important;
+            justify-content: space-between;
+        }
+        li.product {
+            width: 200px !important;
+        }
+    }
+    
+    @media screen and (max-width:500px) {
+        ul.products {
+            display: grid !important;
+            grid-template-columns: repeat(1, 100%) !important;
+            justify-content: space-between;
+        }
+        li.product {
+            width: 100% !important;
+        }
+    }
+</style>
+{% endblock pageCSS %} {% block bodyClass %} archive post-type-archive post-type-archive-product theme-helopizza woocommerce-shop woocommerce woocommerce-page woocommerce-js pbmit-top-menu-total-6 pbmit-sidebar-exists pbmit-sidebar-right pbmit-cursor-disable
+elementor-default elementor-kit-12 {% endblock bodyClass %} {% block content %}
+<div class="pbmit-title-bar-wrapper pbmit-bg-image-yes pbmit-titlebar-style-center">
+    <div class="container">
+        <div class="pbmit-title-bar-content">
+            <div class="pbmit-title-bar-content-inner">
+                <div class="pbmit-tbar">
+                    <div class="pbmit-tbar-inner container">
+                        <h1 class="pbmit-tbar-title">{{category.name}}</h1>
+                    </div>
+                </div>
+                <div class="pbmit-breadcrumb">
+                    <div class="pbmit-breadcrumb-inner"><span><a title="Go to Hello Pizza" href="{% url "home"  %}"
+                                class="home"><span>HelloPizza</span></a>
+                        </span><span class="sep"><i
+                                class="pbmit-base-icon-angle-right"></i></span><span><span
+                                class="archive post-product-archive current-item">{{category.name}}</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .pbmit-title-bar-content -->
+    </div>
+    <!-- .container -->
+</div>
+<!-- .pbmit-title-bar-wrapper -->
+</header>
+<!-- #masthead -->
+<div class="site-content-contain ">
+    <div class="site-content-wrap">
+        <div id="content" class="site-content container">
+            <div class="row multi-columns-row">
+
+                <div class="pbmit-header-search-form-wrapper">
+                    <div class="pbmit-search-close"><svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="28.163" height="28.163" viewBox="0 0 26.163 26.163">
+                            <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
+                            <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
+                        </svg></div>
+                    <form role="search" method="get" class="search-form" action="">
+                        <label for="search-form-67cc4efe429c4">
+                            <span class="screen-reader-text">Search for:</span>
+                        </label>
+                        <input type="search" id="search-form-67cc4efe429c4" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+                        <button type="submit" class="search-submit" title="Search"><span
+                                class="screen-reader-text">Search</span></button>
+                    </form>
+                </div>
+                <div id="primary1" class="content-area col-12">
+                    <header class="woocommerce-products-header">
+                        <h1 class="woocommerce-products-header__title page-title">{{category.name}}</h1>
+
+                    </header>
+                    <div class="woocommerce-notices-wrapper"></div>
+
+                    <ul class="products columns-3">
+                        {% for menu_item in menu_items %}
+                        <li class="col-xl-4 position-relative product type-product post-442 status-publish first instock product_cat-chicken-pizza has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                            <span class='label  {% if menu_item.is_vegetarian %}vegge {% endif %}'>
+                                        
+                            </span>
+                            <a class="woocommerce-LoopProduct-link woocommerce-loop-product__link"><img fetchpriority="high" width="300" height="300" src="{{menu_item.image.url}}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" {% comment %} srcset="wp-content/uploads/sites/4/2023/03/shop-img-11.png 300w, wp-content/uploads/sites/4/2023/03/shop-img-11-150x150.png 150w, wp-content/uploads/sites/4/2023/03/shop-img-11-100x100.png 100w"
+                                    {% endcomment %} sizes="(max-width: 300px) 100vw, 300px" />
+
+
+
+
+                                <h2 class="woocommerce-loop-product__title">{{menu_item.name}}</h2>
+
+
+
+                                <span class="price">
+                                    {% if menu_item.discount_percentage != 0 %}
+                                    <span class="woocommerce-Price-amount amount discount-percentage"><bdi>
+                                        
+                                        -{{ menu_item.discount_percentage | floatformat }}%
+                                    </bdi></span>
+                                <del aria-hidden="true">
+                                        <span class="woocommerce-Price-amount amount original-price"><bdi>
+                                            <span class="woocommerce-Price-currencySymbol">&dollar;</span>
+                                            {{ menu_item.price }}
+                                        </bdi></span>
+                                       </del>
+                                <span class="woocommerce-Price-amount amount discounted-price"><bdi>
+                                        <span class="woocommerce-Price-currencySymbol">&dollar;</span> {{ menu_item.discounted_price }}
+                                </bdi>
+                                </span>
+
+                                {% else %}
+                                <span class="woocommerce-Price-amount amount"><bdi>
+                                        <span class="woocommerce-Price-currencySymbol">&dollar;</span> {{ menu_item.price }}
+                                </bdi>
+                                </span>
+                                {% endif %}
+
+
+
+                                </span>
+
+                            </a>
+
+                        </li>
+
+                       
+                        {% endfor %}
+                    </ul>
+                  
+                </div>
+                
+                <!-- #secondary -->
+            </div>
+            <!-- .row -->
+        </div>
+        <!-- #content -->
+    </div>
+    <!-- .site-content-wrap -->
+
+
+    {% endblock content %}
