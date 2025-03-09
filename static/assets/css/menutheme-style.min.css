@@ -112,7 +112,7 @@
 .pbmit-title-bar-wrapper,
 .pbmit-title-bar-wrapper.pbmit-bg-color-custom:before {
     background-color: #000c17;
-    background-image: url(https://dilicious-demo.pbminfotech.com/italian-food/wp-content/uploads/sites/4/2023/03/italian-title-bg-new.png);
+    background-image: url(../media/italian-title-bg-new.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -122,7 +122,7 @@
 .site-footer,
 .site-footer.pbmit-bg-color-custom:before {
     background-color: #0a1d35;
-    background-image: url(https://dilicious-demo.pbminfotech.com/italian-food/wp-content/uploads/sites/4/2023/03/footer-bg.jpg);
+    background-image: url(../media/footer-bg.jpg);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: cover;

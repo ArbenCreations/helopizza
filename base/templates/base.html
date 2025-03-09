@@ -630,12 +630,12 @@
                                                         <ul id="pbmit-top-menu" class="menu">
                                                             <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="/">Home</a></li>
 
-                                                            <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14"><a href="#">Food items</a>
+                                                            {% comment %} <li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14"><a href="#">Food items</a>
                                                                 <ul class="sub-menu">
                                                                     {% for category in categories %}
 
                                                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2091"><a href="{% url "food" cid=category.id categoryName=category.name %}">{{category.name}}</a></li>
-                                                                    {% endfor %}
+                                                                    {% endfor %} {% endcomment %}
                                                                     {% comment %} <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2092"><a href="">Popular Vegetarian Pizza Items</a></li>
                                                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2093"><a href="">Popular Meat Pizza Items</a></li>
                                                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2094"><a href="">Popular Chicken Pizza Items</a></li>
@@ -645,8 +645,9 @@
                                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2262"><a href="">Desert</a></li>
                                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2308"><a href="">Sides</a></li>
                                                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2324"><a href="">Salad</a></li> {% endcomment %}
-                                                                </ul>
-                                                            </li>
+                                                                {% comment %} </ul>
+                                                            </li> {% endcomment %}
+                                                            <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="{% url "about" %}">About Us</a></li>
                                                             <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="{% url "menu" %}">Food Menu</a></li>
                                                             <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="{% url "reservation" %}">Reservation</a></li>
 
