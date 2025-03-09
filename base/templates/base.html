@@ -591,11 +591,20 @@
     <style>
         /** Mega Menu CSS: fs **/
         
+        @media screen and (max-width:500px){
+
+            #slider-1-slide-1-layer-7{
+                margin-top:50px;
+            }
+            .pbmit-title-bar-wrapper{
+                background-position: -380px top;
+            }
+        }
     </style>
 
 
     {% block pageCSS %}
-
+    
     {% endblock pageCSS %}
 </head>
 
@@ -608,7 +617,7 @@
             <div class="pbmit-header-overlay">
                 <div class="pbmit-header-height-wrapper">
                     <div class="pbmit-main-header-area pbmit-sticky-logo-yes pbmit-responsive-logo-no pbmit-header-wrapper pbmit-bg-color-transparent">
-                        <div class="container">
+                        <div class="container-xl">
                             <!-- container -->
                             <div class="pbmit-header-content d-flex justify-content-between align-items-center">
                                 <div class="pbmit-logo-menuarea">
