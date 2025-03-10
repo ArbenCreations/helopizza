@@ -112,7 +112,7 @@
 .pbmit-title-bar-wrapper,
 .pbmit-title-bar-wrapper.pbmit-bg-color-custom:before {
     background-color: #000c17;
-    background-image: url(../media/italian-title-bg-new.png);
+    background-image: url(../media/titlebar-pattern.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

@@ -111,8 +111,9 @@
 
 .pbmit-title-bar-wrapper,
 .pbmit-title-bar-wrapper.pbmit-bg-color-custom:before {
-    background-color: var(--pbmit-helopizza-secondary-color);
-    background-image: url(../media/italian-title-bg-new.png);
+    /* background-color: var(--pbmit-helopizza-secondary-color); */
+    background-color: var(--pbmit-helopizza-global-color);
+    background-image: url(../media/titlebar-pattern.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
