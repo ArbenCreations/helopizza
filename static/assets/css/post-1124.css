@@ -5,13 +5,13 @@
 
 .elementor-1124 .elementor-element.elementor-element-e8a2a75:not(.elementor-motion-effects-element-type-background),
 .elementor-1124 .elementor-element.elementor-element-e8a2a75>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://helopizza-demo.pbminfotech.com/pizza/wp-content/uploads/sites/2/2023/02/transparent-pattern-img.png");
+    background-image: url("../media/transparent-pattern-img.png");
     background-position: top center;
     background-repeat: no-repeat;
 }
 
 .elementor-1124 .elementor-element.elementor-element-e8a2a75>.elementor-background-overlay {
-    background-image: url("https://helopizza-demo.pbminfotech.com/pizza/wp-content/uploads/sites/2/2023/03/bg-pattern.png");
+    background-image: url("../media/bg-pattern.png");
     opacity: 1;
     transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
 }
@@ -562,7 +562,7 @@ body.rtl .elementor-1124 .elementor-element.elementor-element-dd18f75 {
 
 .elementor-1124 .elementor-element.elementor-element-e71b354:not(.elementor-motion-effects-element-type-background),
 .elementor-1124 .elementor-element.elementor-element-e71b354>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://helopizza-demo.pbminfotech.com/pizza/wp-content/uploads/sites/2/2023/03/bg-pattern.png");
+    background-image: url("../media/bg-pattern.png");
 }
 
 .elementor-1124 .elementor-element.elementor-element-e71b354>.elementor-background-overlay {
@@ -678,7 +678,7 @@ body.rtl .elementor-1124 .elementor-element.elementor-element-6404180 {
 
 .elementor-1124 .elementor-element.elementor-element-8c248e2:not(.elementor-motion-effects-element-type-background),
 .elementor-1124 .elementor-element.elementor-element-8c248e2>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("https://helopizza-demo.pbminfotech.com/pizza/wp-content/uploads/sites/2/2023/03/bg-pattern.png");
+    background-image: url("../media/bg-pattern.png");
 }
 
 .elementor-1124 .elementor-element.elementor-element-8c248e2>.elementor-background-overlay {
@@ -985,7 +985,7 @@ body.rtl .elementor-1124 .elementor-element.elementor-element-a131802 {
 }
 
 .elementor-1124 .elementor-element.elementor-element-4512b57>.elementor-background-overlay {
-    background-image: url("https://helopizza-demo.pbminfotech.com/pizza/wp-content/uploads/sites/2/2023/03/bg-pattern.png");
+    background-image: url("../media/bg-pattern.png");
     opacity: 1;
 }
 
