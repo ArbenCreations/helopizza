@@ -213,7 +213,7 @@ body.rtl .elementor-388 .elementor-element.elementor-element-2053e50 {
 
 .elementor-388 .elementor-element.elementor-element-3c7cbeb:not(.elementor-motion-effects-element-type-background)>.elementor-widget-wrap,
 .elementor-388 .elementor-element.elementor-element-3c7cbeb>.elementor-widget-wrap>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("../media/pizza-delivery-drone-3d-rendering.png");
+    /* background-image: url("../media/pizza-delivery-drone-3d-rendering.png"); */
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
