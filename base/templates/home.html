@@ -58,6 +58,8 @@
                                 <div class="pbmit-custom-heading -align animation-style1">
                                     <h2 class="pbmit-element-title" style="perspective: 400px;">
                                         Crafted Bliss
+                                        
+
                                         {% comment %} <div style="display: block; text-align: start; position: relative;" class="split-line"><div style="position:relative;display:inline-block;"> <div style="position: relative; display: inline-block; transform: translate(0px); opacity: 1;">C</div><div style="position: relative; display: inline-block; transform: translate(0px); opacity: 1;">h</div><div style="position: relative; display: inline-block; transform: translate(0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; transform: translate(0px); opacity: 1;">e</div><div style="position: relative; display: inline-block; transform: translate(0px); opacity: 1;">s</div><div style="position: relative; display: inline-block; transform: translate(0px); opacity: 1;">y</div></div> </div> {% endcomment %}
                                     </h2>
                                 </div>		</div>
@@ -751,1064 +753,73 @@
                                                                     <div class="pbmit-heading-subheading pbmit-reverse-heading-yes"></div>
                                                                     <div class="pbmit-tabs">
                                                                         <ul class="pbmit-tabs-heading">
-                                        
-                                        
-                                                                            <li class="pbmit-tab-link pbmit-tab-li-active" data-pbmit-tab="1">
+                                                                            {% for category in categories %}
+                                                                            <li class="pbmit-tab-link col-xl-4  {% if forloop.first %}pbmit-tab-li-active{% endif %}" data-pbmit-tab="{{ category.id }}">
                                                                                 <div class="pbmit-tabmenu-icon">
-                                                                                    <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                        <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                class="pbmit-helopizza-icon pbmit-helopizza-icon-pizza-1"></i>
+                                                                                    <div class="pbmit-tabmenu-icon-wrapper ">
+                                                                                        <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
+                                                                                            <img src="{{ category.category_image }}" style='
+                                                                                            width:60px; 
+                                                                                            height:60px;
+                                                                                            border-radius:100vh;
+                                                                                            object-fit:cover;
+                                                                                            object-position:center;'>
+                                                                                            {% comment %} <i class="pbmit-helopizza-icon pbmit-helopizza-icon-pizza-1"></i> {% endcomment %}
                                                                                         </div>
                                                                                     </div>
-                                                                                </div> <span>
-                                                                                    <h3 class="pbminfotech-tabmenu-heading">Sandwich</h3>
+                                                                                </div>
+                                                                                <span>
+                                                                                    <h3 class="pbminfotech-tabmenu-heading">{{ category.category_name }}</h3>
                                                                                     <div class="pbminfotech-sep"></div>
                                                                                 </span>
                                                                             </li>
-                                        
-                                        
-                                                                            <li class="pbmit-tab-link " data-pbmit-tab="2">
-                                                                                <div class="pbmit-tabmenu-icon">
-                                                                                    <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                        <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                class="pbmit-helopizza-icon pbmit-helopizza-icon-burger"></i>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div> <span>
-                                                                                    <h3 class="pbminfotech-tabmenu-heading">Burger</h3>
-                                                                                    <div class="pbminfotech-sep"></div>
-                                                                                </span>
-                                                                            </li>
-                                        
-                                        
-                                                                            <li class="pbmit-tab-link " data-pbmit-tab="3">
-                                                                                <div class="pbmit-tabmenu-icon">
-                                                                                    <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                        <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                class="pbmit-helopizza-icon pbmit-helopizza-icon-pizza"></i>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div> <span>
-                                                                                    <h3 class="pbminfotech-tabmenu-heading">Pizza</h3>
-                                                                                    <div class="pbminfotech-sep"></div>
-                                                                                </span>
-                                                                            </li>
-                                        
-                                        
-                                                                            <li class="pbmit-tab-link " data-pbmit-tab="4">
-                                                                                <div class="pbmit-tabmenu-icon">
-                                                                                    <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                        <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                class="pbmit-helopizza-icon pbmit-helopizza-icon-sushi-1"></i>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div> <span>
-                                                                                    <h3 class="pbminfotech-tabmenu-heading">Pasta</h3>
-                                                                                    <div class="pbminfotech-sep"></div>
-                                                                                </span>
-                                                                            </li>
-                                        
-                                        
-                                                                            <li class="pbmit-tab-link " data-pbmit-tab="5">
-                                                                                <div class="pbmit-tabmenu-icon">
-                                                                                    <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                        <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                class="pbmit-helopizza-icon pbmit-helopizza-icon-burrito"></i>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div> <span>
-                                                                                    <h3 class="pbminfotech-tabmenu-heading">Tacos</h3>
-                                                                                    <div class="pbminfotech-sep"></div>
-                                                                                </span>
-                                                                            </li>
-                                        
-                                        
-                                                                            <li class="pbmit-tab-link " data-pbmit-tab="6">
-                                                                                <div class="pbmit-tabmenu-icon">
-                                                                                    <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                        <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                class="pbmit-helopizza-icon pbmit-helopizza-icon-ice-cream-1"></i>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div> <span>
-                                                                                    <h3 class="pbminfotech-tabmenu-heading">Dessert</h3>
-                                                                                    <div class="pbminfotech-sep"></div>
-                                                                                </span>
-                                                                            </li>
-                                        
+                                                                            {% endfor %}
                                                                         </ul>
-                                        
+                                                                    
                                                                         <div class="pbmit-tab-content-wrapper">
-                                        
-                                        
-                                                                            <div class="pbmit-tab-content pbmit-tab-content-1 pbmit-tab-active">
-                                                                                <div class="pbmit-tab-content-title" data-pbmit-tab="1">
+                                                                            {% for category in categories %}
+                                                                            <div class="pbmit-tab-content pbmit-tab-content-{{ category.id }} {% if forloop.first %}pbmit-tab-active{% endif %}">
+                                                                                <div class="pbmit-tab-content-title" data-pbmit-tab="{{ category.id }}">
                                                                                     <div class="pbmit-tabmenu-icon">
                                                                                         <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                            <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                    class="pbmit-helopizza-icon pbmit-helopizza-icon-pizza-1"></i>
+                                                                                            <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
+                                                                                                <img src="{{ category.category_image }}" style='
+                                                                                                width:60px; 
+                                                                                                height:60px;
+                                                                                                border-radius:100vh;
+                                                                                                object-fit:cover;
+                                                                                                object-position:center;'>
                                                                                             </div>
                                                                                         </div>
-                                                                                    </div> <span>
-                                                                                        <h3 class="pbminfotech-tabmenu-heading">Sandwich</h3>
+                                                                                    </div>
+                                                                                    <span>
+                                                                                        <h3 class="pbminfotech-tabmenu-heading">{{ category.category_name }}</h3>
                                                                                         <div class="pbminfotech-sep"></div>
                                                                                     </span>
                                                                                 </div>
                                                                                 <div class="row multi-columns-row pbmit-tab-content-inner">
-                                        
+                                                                                    {% for product in products %}
+                                                                                    {% if product.product_category_id == category.id %}
                                                                                     <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
                                                                                         <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/sandwich-img-01.jpg' %}"
-                                                                                                alt="Fresh School Sandwich" />
+                                                                                            <img decoding="async" src="{{ product.image_url }}" alt="{{ product.title }}" />
                                                                                         </div>
                                                                                         <div class="pbmit-ihbox-contents">
                                                                                             <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Sandwich</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
+                                                                                                <h2 class="pbmit-element-title">{{ product.title }}</h2>
+                                                                                                <h4 class="pbmit-element-subtitle">${{ product.price }}</h4>
                                                                                             </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
+                                                                                            <div class="pbmit-heading-desc">{{ product.short_description }}</div>
                                                                                         </div>
-                                        
                                                                                     </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/sandwich-img-01.jpg' %}"
-                                                                                                alt="Fresh School Sandwich" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Sandwich</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/sandwich-img-02.jpg' %}"
-                                                                                                alt="Triple Cheese Sandwich" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Triple Cheese Sandwich</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/sandwich-img-02.jpg' %}"
-                                                                                                alt="Triple Cheese Sandwich" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Triple Cheese Sandwich</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/sandwich-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/sandwich-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/sandwich-img-04.jpg' %}"
-                                                                                                alt="Sandwich Quattro Stagioni" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Sandwich Quattro Stagioni</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/sandwich-img-04.jpg' %}"
-                                                                                                alt="Sandwich Quattro Stagioni" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Sandwich Quattro Stagioni</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
+                                                                                    {% endif %}
+                                                                                    {% endfor %}
                                                                                 </div>
                                                                             </div>
-                                        
-                                                                            <div class="pbmit-tab-content pbmit-tab-content-2 ">
-                                                                                <div class="pbmit-tab-content-title" data-pbmit-tab="2">
-                                                                                    <div class="pbmit-tabmenu-icon">
-                                                                                        <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                            <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                    class="pbmit-helopizza-icon pbmit-helopizza-icon-burger"></i>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div> <span>
-                                                                                        <h3 class="pbminfotech-tabmenu-heading">Burger</h3>
-                                                                                        <div class="pbminfotech-sep"></div>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="row multi-columns-row pbmit-tab-content-inner">
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/burger-img-01.jpg' %}"
-                                                                                                alt="Fresh School Burger" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Burger</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/burger-img-01.jpg' %}"
-                                                                                                alt="Fresh School Burger" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Burger</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/burger-img-02.jpg' %}"
-                                                                                                alt="Triple Cheeseburger" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Triple Cheeseburger</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/burger-img-02.jpg' %}"
-                                                                                                alt="Triple Cheeseburger" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Triple Cheeseburger</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/burger-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House	" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House </h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/burger-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House	" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House </h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/burger-img-04.jpg' %}"
-                                                                                                alt="Burger Quattro Stagioni" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Burger Quattro Stagioni</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/burger-img-04.jpg' %}"
-                                                                                                alt="Burger Quattro Stagioni" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Burger Quattro Stagioni</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                        
-                                                                            <div class="pbmit-tab-content pbmit-tab-content-3 ">
-                                                                                <div class="pbmit-tab-content-title" data-pbmit-tab="3">
-                                                                                    <div class="pbmit-tabmenu-icon">
-                                                                                        <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                            <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                    class="pbmit-helopizza-icon pbmit-helopizza-icon-pizza"></i>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div> <span>
-                                                                                        <h3 class="pbminfotech-tabmenu-heading">Pizza</h3>
-                                                                                        <div class="pbminfotech-sep"></div>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="row multi-columns-row pbmit-tab-content-inner">
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pizza-img-01.jpg' %}"
-                                                                                                alt="Fresh School Pizza" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Pizza</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pizza-img-01.jpg' %}"
-                                                                                                alt="Fresh School Pizza" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Pizza</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pizza-img-02.jpg' %}"
-                                                                                                alt="Triple Cheese Pizza" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Triple Cheese Pizza</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pizza-img-02.jpg' %}"
-                                                                                                alt="Triple Cheese Pizza" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Triple Cheese Pizza</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pizza-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pizza-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pizza-img-04.jpg' %}"
-                                                                                                alt="Pizza Quattro Stagioni	" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Pizza Quattro Stagioni </h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pizza-img-04.jpg' %}"
-                                                                                                alt="Pizza Quattro Stagioni	" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Pizza Quattro Stagioni </h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                        
-                                                                            <div class="pbmit-tab-content pbmit-tab-content-4 ">
-                                                                                <div class="pbmit-tab-content-title" data-pbmit-tab="4">
-                                                                                    <div class="pbmit-tabmenu-icon">
-                                                                                        <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                            <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                    class="pbmit-helopizza-icon pbmit-helopizza-icon-sushi-1"></i>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div> <span>
-                                                                                        <h3 class="pbminfotech-tabmenu-heading">Pasta</h3>
-                                                                                        <div class="pbminfotech-sep"></div>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="row multi-columns-row pbmit-tab-content-inner">
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pasta-img-01.jpg' %}"
-                                                                                                alt="Fresh School Pasta" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Pasta</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pasta-img-01.jpg' %}"
-                                                                                                alt="Fresh School Pasta" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Pasta</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pasta-img-02.jpg' %}"
-                                                                                                alt="Three Cheese Pasta" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Three Cheese Pasta</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pasta-img-02.jpg' %}"
-                                                                                                alt="Three Cheese Pasta" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Three Cheese Pasta</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pasta-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pasta-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pasta-img-04.jpg' %}"
-                                                                                                alt="Pasta Quattro Stagioni" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Pasta Quattro Stagioni</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/pasta-img-04.jpg' %}"
-                                                                                                alt="Pasta Quattro Stagioni" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Pasta Quattro Stagioni</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                        
-                                                                            <div class="pbmit-tab-content pbmit-tab-content-5 ">
-                                                                                <div class="pbmit-tab-content-title" data-pbmit-tab="5">
-                                                                                    <div class="pbmit-tabmenu-icon">
-                                                                                        <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                            <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                    class="pbmit-helopizza-icon pbmit-helopizza-icon-burrito"></i>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div> <span>
-                                                                                        <h3 class="pbminfotech-tabmenu-heading">Tacos</h3>
-                                                                                        <div class="pbminfotech-sep"></div>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="row multi-columns-row pbmit-tab-content-inner">
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/tacos-img-01.jpg' %}"
-                                                                                                alt="Fresh School Tacos" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Tacos</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/tacos-img-01.jpg' %}"
-                                                                                                alt="Fresh School Tacos" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Tacos</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/tacos-img-02.jpg' %}"
-                                                                                                alt="Three Cheese Tacos" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Three Cheese Tacos</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/tacos-img-02.jpg' %}"
-                                                                                                alt="Three Cheese Tacos" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Three Cheese Tacos</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/tacos-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/tacos-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Classic greek salad, barrel aged
-                                                                                                feta cheese, bread</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/tacos-img-04.jpg' %}"
-                                                                                                alt="Tacos Quattro Stagioni" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Tacos Quattro Stagioni</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/tacos-img-04.jpg' %}"
-                                                                                                alt="Tacos Quattro Stagioni" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Tacos Quattro Stagioni</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Mediterranean olives casserole,
-                                                                                                celeriac puree</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                        
-                                                                            <div class="pbmit-tab-content pbmit-tab-content-6 ">
-                                                                                <div class="pbmit-tab-content-title" data-pbmit-tab="6">
-                                                                                    <div class="pbmit-tabmenu-icon">
-                                                                                        <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                            <div class="pbmit-icon-wrapper pbmit-icon-type-icon"><i
-                                                                                                    class="pbmit-helopizza-icon pbmit-helopizza-icon-ice-cream-1"></i>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div> <span>
-                                                                                        <h3 class="pbminfotech-tabmenu-heading">Dessert</h3>
-                                                                                        <div class="pbminfotech-sep"></div>
-                                                                                    </span>
-                                                                                </div>
-                                                                                <div class="row multi-columns-row pbmit-tab-content-inner">
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/desert-img-01.jpg' %}"
-                                                                                                alt="Fresh School Dessert" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Dessert</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Flour, sugar, salt, milk, and
-                                                                                                leavening agents</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/desert-img-01.jpg' %}"
-                                                                                                alt="Fresh School Dessert" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Fresh School Dessert</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$44.95</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Flour, sugar, salt, milk, and
-                                                                                                leavening agents</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/desert-img-02.jpg' %}"
-                                                                                                alt="Triple Layered Dessert" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Triple Layered Dessert</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Eggs, yeast, baking powder, cacao
-                                                                                                powder</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/desert-img-02.jpg' %}"
-                                                                                                alt="Triple Layered Dessert" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Triple Layered Dessert</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$50.00</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Eggs, yeast, baking powder, cacao
-                                                                                                powder</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/desert-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Flour, sugar, salt, milk, and
-                                                                                                leavening agents</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/desert-img-03.jpg' %}"
-                                                                                                alt="Specialty of the House" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Specialty of the House</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$48.75</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Flour, sugar, salt, milk, and
-                                                                                                leavening agents</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/desert-img-04.jpg' %}"
-                                                                                                alt="Peach Mango Dessert" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Peach Mango Dessert</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Eggs, yeast, baking powder, cacao
-                                                                                                powder</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                        
-                                                                                    <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                        
-                                                                                        <div class="pbmit-ihbox-icon">
-                                                                                            <img decoding="async"
-                                                                                                src="{% static '/assets/media/desert-img-04.jpg' %}"
-                                                                                                alt="Peach Mango Dessert" />
-                                                                                        </div>
-                                                                                        <div class="pbmit-ihbox-contents">
-                                                                                            <div class="pbmit-content-inner d-flex">
-                                                                                                <h2 class="pbmit-element-title">Peach Mango Dessert</h2>
-                                                                                                <h4 class="pbmit-element-subtitle">$39.50</h4>
-                                                                                            </div>
-                                                                                            <div class="pbmit-heading-desc">Eggs, yeast, baking powder, cacao
-                                                                                                powder</div>
-                                                                                        </div>
-                                        
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                        
+                                                                            {% endfor %}
                                                                         </div>
                                                                     </div>
+                                                                    
                                         
                                         
                                                                 </div>
@@ -2324,7 +1335,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <section class="elementor-section elementor-top-section elementor-element elementor-element-cb21596 pbmit-col-stretched-both elementor-section-stretched pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                        {% comment %} <section class="elementor-section elementor-top-section elementor-element elementor-element-cb21596 pbmit-col-stretched-both elementor-section-stretched pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                             data-id="cb21596" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
                                             <div class="elementor-container elementor-column-gap-no">
                                                 <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0c13ec5 pbmit-bg-color-yes pbmit-elementor-bg-color-blackish pbmit-text-color-white pbmit-bg-image-over-color" data-id="0c13ec5" data-element_type="column"
@@ -2436,8 +1447,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
-                                        <section class="elementor-section elementor-top-section elementor-element elementor-element-aaf3f3a elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                        </section> {% endcomment %}
+                                        {% comment %} <section class="elementor-section elementor-top-section elementor-element elementor-element-aaf3f3a elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                             data-id="aaf3f3a" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
                                             <div class="elementor-container elementor-column-gap-no">
                                                 <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-341cb21 pbmit-bg-color-over-image" data-id="341cb21" data-element_type="column">
@@ -2539,9 +1550,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </section>
+                                        </section> {% endcomment %}
                                     </div>
-                                    <h3 class="pbmit-hide">Homepage 03</h3>
+                                    {% comment %} <h3 class="pbmit-hide">Homepage 03</h3> {% endcomment %}
                                 </div>
                                 <!-- .entry-content -->
                             </div>
@@ -2555,4 +1566,6 @@
             </div>
             <!-- .site-content-wrap -->
         
+
+
 {% endblock content %}

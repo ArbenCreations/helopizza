@@ -4123,7 +4123,9 @@ body.rtl .pbmit-list-style-1.elementor-widget .elementor-icon-list-items .elemen
     margin: 0 0 25px 0;
     list-style: none;
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
 }
 
 .pbminfotech-ele-tab-menu .pbmit-tab-content-title,
@@ -4134,13 +4136,28 @@ body.rtl .pbmit-list-style-1.elementor-widget .elementor-icon-list-items .elemen
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     border-radius: 12px;
-    flex-grow: 1;
-    flex-basis: 0%;
+    /* flex-grow: 1; */
+    /* flex-basis: 0%; */
+    width: 140px;
     border: none;
     font-size: 16px;
     line-height: 24px;
     color: var(--pbmit-helopizza-blackish-color);
     background-color: var(--pbmit-helopizza-white-color)
+}
+
+.menuu .pbminfotech-ele-tab-menu .pbmit-tabs-heading {
+    justify-content: center;
+}
+
+.menuu .pbminfotech-ele-tab-menu .pbmit-tab-content-title,
+.menuu .pbminfotech-ele-tab-menu .pbmit-tab-link {
+    width: 160px;
+    justify-content: center;
+}
+
+.pbminfotech-ele-tab-menu span h3 {
+    font-size: 14px;
 }
 
 .pbminfotech-ele-tab-menu .pbmit-tab-link:not(:last-child) {
@@ -5833,7 +5850,7 @@ body.rtl .pbmit-countdown-style-1 #main_countedown_1 .time_description {
     text-align: center;
     line-height: 46px;
     font-size: 24px;
-    color: var(--pbmit-helopizza-global-color);
+    color: var(--pbmit-helopizza-secondary-color);
     left: 2px;
     top: 2px;
     height: 46px;
@@ -5876,7 +5893,7 @@ body.rtl .pbmit-countdown-style-1 #main_countedown_1 .time_description {
 }
 
 .pbmit-progress-wrap svg.pbmit-progress-circle path {
-    stroke: var(--pbmit-helopizza-global-color);
+    stroke: var(--pbmit-helopizza-secondary-color);
     stroke-width: 4;
     box-sizing: border-box;
     -webkit-transition: all 200ms linear;
@@ -5906,4 +5923,12 @@ body.rtl lottie-player {
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     transform: scaleX(-1)
+}
+
+@media (max-width:767px) {
+    .pbminfotech-ele-tab-menu .pbmit-tab-content-title {
+        width: auto !important;
+        flex-grow: 1;
+        flex-basis: 0%;
+    }
 }

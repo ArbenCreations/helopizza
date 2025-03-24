@@ -1353,7 +1353,11 @@ body:not(.pbmit-max-mega-menu-override) .pbmit-sticky-header .pbmit-navbar div>u
 }
 
 .site-title img.pbmit-main-logo {
-    max-height: var(--pbmit-helopizza-logo-height)
+    max-height: var(--pbmit-helopizza-logo-height);
+    max-width: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .site-title img.pbmit-responsive-logo {

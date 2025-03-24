@@ -5,7 +5,7 @@
 }
 
 .pbmit-header-style-4 .pbmit-title-bar-wrapper {
-    padding-top: var(--pbmit-helopizza-header-height)
+    padding-top: 0;
 }
 
 @media (min-width:1201px) {

@@ -516,7 +516,14 @@ body.rtl .pbmit-footer-style-2 .pbmit-footer-big-area .pbmit-footer-right .pbmit
 }
 
 .pbmit-footer-style-2 .pbmit-footer-logo {
-    max-height: 60px
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pbmit-footer-style-2 .pbmit-footer-logo img {
+    object-fit: cover;
+    object-position: center;
 }
 
 .pbmit-footer-style-2 .pbmit-footer-big-area-wrapper .row {

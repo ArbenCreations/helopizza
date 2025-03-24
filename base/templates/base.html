@@ -875,7 +875,7 @@
                                 <div class="pbmit-logo-menuarea">
                                     <div class="site-branding pbmit-logo-area">
                                         <div class="wrap">
-                                            <h1 class="site-title"><a href="/" rel="home"><span class="site-title-text">helopizza</span><img class="pbmit-main-logo" src="{% static '/assets/media/logo.svg' %}" alt="helopizza Italian Food" title="helopizza Italian Food" /><img class="pbmit-sticky-logo" src="{% static '/assets/media/logo-dark.svg' %}" alt="helopizza Italian Food" title="helopizza Italian Food" /></a></h1>
+                                            <h1 class="site-title"><a href="/" rel="home"><span class="site-title-text">helopizza</span><img class="pbmit-main-logo" src="{% static '/assets/media/helloLOGO.svg' %}" alt="helopizza Italian Food" title="helopizza Italian Food" /><img class="pbmit-sticky-logo" src="{% static '/assets/media/helloLOGO.svg' %}" alt="helopizza Italian Food" title="helopizza Italian Food" /></a></h1>
                                             <!-- Logo area -->
                                         </div>
                                         <!-- .wrap -->
@@ -910,7 +910,7 @@
                                                             </li> {% endcomment %}
                                                             <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="{% url "about" %}">About Us</a></li>
                                                             <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="{% url "menu" %}">Food Menu</a></li>
-                                                            <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="{% url "reservation" %}">Reservation</a></li>
+                                                            {% comment %} <li id="menu-item-484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-484"><a href="{% url "reservation" %}">Reservation</a></li> {% endcomment %}
 
                                                            
                                                           
@@ -977,7 +977,7 @@
                                 </div>
                                 <div class="col-md-5 col-sm-12 pbmit-footer-right">
                                     <div class="pbmit-footer-logo">
-                                        <img class="pbmit-footer-logo" src="{% static '/assets/media/logo.svg' %}" alt="helopizza Italian Food" title="helopizza Italian Food" />
+                                        <img class="pbmit-footer-logo" src="{% static '/assets/media/helloLOGO.svg' %}" alt="helopizza Italian Food" title="helopizza Italian Food" />
                                     </div>
                                 </div>
                             </div>
@@ -993,14 +993,14 @@
                                     <div class="menu-company-container">
                                         <ul id="menu-company" class="menu">
                                             
-                                            <li id="menu-item-499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-499"><a href="#">Blogs</a></li>
-                                            <li id="menu-item-495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-495"><a href="#">FAQ</a></li>
-                                            <li id="menu-item-500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-500"><a href="#">Reservation</a></li>
+                                            {% comment %} <li id="menu-item-499" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-499"><a href="#">Blogs</a></li> {% endcomment %}
+                                            {% comment %} <li id="menu-item-495" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-495"><a href="#">FAQ</a></li> {% endcomment %}
+                                            {% comment %} <li id="menu-item-500" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-500"><a href="#">Reservation</a></li> {% endcomment %}
                                             <li id="menu-item-496" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-496"><a href="#">Report A Bug</a></li>
                                             <li id="menu-item-497" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-497"><a href="#">Careers</a></li>
-                                            <li id="menu-item-498" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-498"><a href="#">About Us</a></li>
-                                            <li id="menu-item-501" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-501"><a href="#">Food Delivery</a></li>
-                                            <li id="menu-item-494" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-494"><a href="#">Restaurant</a></li>
+                                            <li id="menu-item-498" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-498"><a href="{% url "about" %}">About Us</a></li>
+                                            <li id="menu-item-501" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-501"><a href="{% url "menu" %}">Menu</a></li>
+                                            <li id="menu-item-494" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-494"><a href="http://utellorders.ca/online-order/hel-12">Order Now</a></li>
                                         </ul>
                                     </div>
                                 </aside>
@@ -1541,10 +1541,17 @@ function hidePreloader() {
     document.getElementById("content").style.display = "block";
 }
 
-// Simulate loading delay
 window.onload = function () {
-    setTimeout(hidePreloader, 2000); // Hide preloader after 2 seconds
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var delay = isMobile ? 0 : 2000; // Set delay to 0 for mobile, 2000ms for others
+
+    setTimeout(hidePreloader, delay);
 };
+
+function hidePreloader() {
+    // Add your logic to hide the preloader
+    document.getElementById("preloader").style.display = "none";
+}
     </script>
 </body>
 
