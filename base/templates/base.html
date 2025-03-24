@@ -1543,7 +1543,7 @@ function hidePreloader() {
 
 window.onload = function () {
     var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    var delay = isMobile ? 0 : 2000; // Set delay to 0 for mobile, 2000ms for others
+    var delay = isMobile ? 0 : 000; // Set delay to 0 for mobile, 2000ms for others
 
     setTimeout(hidePreloader, delay);
 };
@@ -1553,6 +1553,12 @@ function hidePreloader() {
     document.getElementById("preloader").style.display = "none";
 }
     </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new WOW().init();
+        </script>
 </body>
 
 
