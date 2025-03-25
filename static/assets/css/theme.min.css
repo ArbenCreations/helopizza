@@ -4124,8 +4124,12 @@ body.rtl .pbmit-list-style-1.elementor-widget .elementor-icon-list-items .elemen
     list-style: none;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     row-gap: 30px;
+    /* overflow-y: scroll; */
+    justify-content: start;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .pbminfotech-ele-tab-menu .pbmit-tab-content-title,
@@ -4143,17 +4147,18 @@ body.rtl .pbmit-list-style-1.elementor-widget .elementor-icon-list-items .elemen
     font-size: 16px;
     line-height: 24px;
     color: var(--pbmit-helopizza-blackish-color);
-    background-color: var(--pbmit-helopizza-white-color)
+    background-color: var(--pbmit-helopizza-white-color);
+    margin: 20px 0px;
 }
 
 .menuu .pbminfotech-ele-tab-menu .pbmit-tabs-heading {
-    justify-content: center;
+    justify-content: start;
 }
 
 .menuu .pbminfotech-ele-tab-menu .pbmit-tab-content-title,
 .menuu .pbminfotech-ele-tab-menu .pbmit-tab-link {
     width: 160px;
-    justify-content: center;
+    justify-content: start;
 }
 
 .pbminfotech-ele-tab-menu span h3 {

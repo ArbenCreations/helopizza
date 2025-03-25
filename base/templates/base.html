@@ -657,6 +657,16 @@
         }
            
     </style>
+
+    <!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
+<!-- jQuery (required for Slick) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Slick JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
     {% block pageCSS %}
     
     {% endblock pageCSS %}
@@ -1559,6 +1569,36 @@ function hidePreloader() {
     <script>
         new WOW().init();
         </script>
+
+
+    <script>
+        $(document).ready(function() {
+            // Initialize Slick on tabs heading
+            $(".pbmit-tabs-heading").slick({
+                slidesToShow: 6,  // Number of tabs visible at a time
+                infinite: false,
+                arrows: true,
+                variableWidth: true,  // Allows flexible tab sizes
+                touchThreshold: 10,  // More responsive to swipes
+        swipeToSlide: true,  // Enables smooth drag without snap-back
+        draggable: true,  // Allows mouse drag
+        mobileFirst: true  
+            });
+        
+            // Tab Switching Logic
+            $(".pbmit-tab-link").click(function() {
+                var tabId = $(this).attr("data-pbmit-tab");
+        
+                // Remove active class from all tabs and add to clicked one
+                $(".pbmit-tab-link").removeClass("pbmit-tab-li-active");
+                $(this).addClass("pbmit-tab-li-active");
+        
+                // Hide all tab contents and show the selected one
+                $(".pbmit-tab-content").removeClass("pbmit-tab-active");
+                $(".pbmit-tab-content-" + tabId).addClass("pbmit-tab-active");
+            });
+        });
+    </script>
 </body>
 
 
