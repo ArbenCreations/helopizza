@@ -1,16 +1,22 @@
 import asyncio
 import json
 import logging
-from django.core.cache import cache
+import os
+from datetime import datetime, timedelta
 import httpx
 
 logger = logging.getLogger(__name__)
 
 API_URL = "https://api.utellorders.ca/api/v1/products/all_products"
 VENDOR_ID = "12"
-CATEGORIES_CACHE_KEY = "categories_cache"
-PRODUCTS_CACHE_KEY = "products_cache"
-CACHE_TIMEOUT = 1800  # 30 minutes
+
+# File paths for storing data locally
+DATA_DIR = "data_store"
+CATEGORIES_FILE = os.path.join(DATA_DIR, "categories.json")
+PRODUCTS_FILE = os.path.join(DATA_DIR, "products.json")
+
+# Expiry time (30 minutes)
+CACHE_TIMEOUT = timedelta(minutes=30)
 
 
 async def fetch_menu():
@@ -23,7 +29,7 @@ async def fetch_menu():
                 json={"vendor_id": VENDOR_ID, "page_number": 1, "page_size": 100},
             )
             response.raise_for_status()
-            return response.json()  # Assuming API returns JSON
+            return response.json()
     except httpx.RequestError as e:
         logger.error(f"Failed to fetch menu: {e}")
         return None
@@ -38,37 +44,53 @@ async def fetch_cats():
                 headers={"Content-Type": "application/json"},
             )
             response.raise_for_status()
-            return response.json()  # Assuming API returns JSON
+            return response.json()
     except httpx.RequestError as e:
         logger.error(f"Failed to fetch categories: {e}")
         return None
 
 
-async def async_categories_processor():
-    """Asynchronous Django context processor with caching."""
-    categories = cache.get(CATEGORIES_CACHE_KEY)
-    products = cache.get(PRODUCTS_CACHE_KEY)
+def save_to_file(filepath, data):
+    """Save data to a local JSON file."""
+    os.makedirs(DATA_DIR, exist_ok=True)  # Ensure directory exists
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump({"timestamp": datetime.utcnow().isoformat(), "data": data}, f)
 
-    tasks = []
-    if not categories:
-        tasks.append(fetch_cats())
-    if not products:
-        tasks.append(fetch_menu())
 
-    if tasks:
-        results = await asyncio.gather(*tasks)  # Run API calls in parallel
+def load_from_file(filepath):
+    """Load data from a local JSON file if not expired."""
+    if not os.path.exists(filepath):
+        return None
 
-        if not categories and results[0]:
-            categories = results[0].get("data", [])
-            cache.set(CATEGORIES_CACHE_KEY, categories, CACHE_TIMEOUT)
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            content = json.load(f)
+            timestamp = datetime.fromisoformat(content["timestamp"])
+            if datetime.utcnow() - timestamp < CACHE_TIMEOUT:
+                return content["data"]  # Return cached data if still valid
+    except (json.JSONDecodeError, KeyError):
+        return None  # Return None if file is corrupt or missing data
 
-        if not products and len(results) > 1 and results[1]:
-            products = results[1].get("data", [])
-            cache.set(PRODUCTS_CACHE_KEY, products, CACHE_TIMEOUT)
+    return None
 
-    return {"categories": categories or [], "products": products or []}
+
+async def update_local_data():
+    """Fetch latest data and save it to local files."""
+    categories, products = await asyncio.gather(fetch_cats(), fetch_menu())
+
+    if categories:
+        save_to_file(CATEGORIES_FILE, categories.get("data", []))
+
+    if products:
+        save_to_file(PRODUCTS_FILE, products.get("data", []))
 
 
 def categories_processor(request):
-    """Wrapper for async function to make it work in Django."""
-    return asyncio.run(async_categories_processor())  # Blocking call to run async function
+    """Load data from local file, triggering background update if necessary."""
+    categories = load_from_file(CATEGORIES_FILE)
+    products = load_from_file(PRODUCTS_FILE)
+
+    if categories is None or products is None:
+        asyncio.run(update_local_data())  # Trigger background update
+
+    return {"categories": categories or [], "products": products or []}
