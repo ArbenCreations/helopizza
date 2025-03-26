@@ -266,16 +266,10 @@ page-template-default page page-id-389 theme-helopizza woocommerce-js pbmit-top-
                                           <p role="status" aria-live="polite" aria-atomic="true"></p>
                                           <ul></ul>
                                         </div>
-                                        <form action="/italian-food/contact-us/#wpcf7-f343-p389-o1" method="post"
-                                          class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate"
-                                          data-status="init">
+                                        <form action="{% url "contact" %}" method="POST"
+                                          class="wpcf7-form init" >
+                                          {% csrf_token %}
                                           <div style="display: none">
-                                            <input type="hidden" name="_wpcf7" value="343" />
-                                            <input type="hidden" name="_wpcf7_version" value="5.9.8" />
-                                            <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f343-p389-o1" />
-                                            <input type="hidden" name="_wpcf7_container_post" value="389" />
-                                            <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
                                           </div>
                                           <div class="pbmit-form pbmit-main-form">
                                             <div class="row">
@@ -285,9 +279,9 @@ page-template-default page page-id-389 theme-helopizza woocommerce-js pbmit-top-
                                                     <i class="pbmit-base-icon-user-3"></i><span
                                                       class="wpcf7-form-control-wrap" data-name="your-name"><input
                                                         size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                        aria-required="true" aria-invalid="false" placeholder="Name"
-                                                        value="" type="text" name="your-name" /></span>
+                                                        class="wpcf7-form-control wpcf7-text"
+                                                        aria-required="true" aria-invalid="false" placeholder="Name" required="true"
+                                                        type="text" name="your-name" /></span>
                                                   </p>
                                                 </div>
                                               </div>
@@ -297,9 +291,9 @@ page-template-default page page-id-389 theme-helopizza woocommerce-js pbmit-top-
                                                     <i class="pbmit-base-icon-at"></i><span
                                                       class="wpcf7-form-control-wrap" data-name="your-email"><input
                                                         size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-                                                        aria-required="true" aria-invalid="false" placeholder="Email"
-                                                        value="" type="email" name="your-email" /></span>
+                                                        class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email"
+                                                        aria-required="true" aria-invalid="false" placeholder="Email" required
+                                                        type="email" name="your-email" /></span>
                                                   </p>
                                                 </div>
                                               </div>
@@ -311,9 +305,9 @@ page-template-default page page-id-389 theme-helopizza woocommerce-js pbmit-top-
                                                     <i class="pbmit-base-icon-phone-call-1"></i><span
                                                       class="wpcf7-form-control-wrap" data-name="tel-646"><input
                                                         size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
-                                                        aria-required="true" aria-invalid="false" placeholder="Phone"
-                                                        value="" type="tel" name="tel-646" /></span>
+                                                        class="wpcf7-form-control wpcf7-tel wpcf7-text wpcf7-validates-as-tel"
+                                                        aria-required="true" aria-invalid="false" placeholder="Phone" required
+                                                        type="tel" name="tel-646" /></span>
                                                   </p>
                                                 </div>
                                               </div>
@@ -321,11 +315,11 @@ page-template-default page page-id-389 theme-helopizza woocommerce-js pbmit-top-
                                                 <div class="input-group">
                                                   <p>
                                                     <i class="pbmit-base-icon-chat-2"></i><span
-                                                      class="wpcf7-form-control-wrap" data-name="your-name"><input
+                                                      class="wpcf7-form-control-wrap" data-name="Subject"><input
                                                         size="40" maxlength="400"
-                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                        class="wpcf7-form-control wpcf7-text"
                                                         aria-required="true" aria-invalid="false" placeholder="Subject"
-                                                        value="" type="text" name="your-name" /></span>
+                                                        type="text" name="Subject" /></span>
                                                   </p>
                                                 </div>
                                               </div>
@@ -337,7 +331,7 @@ page-template-default page page-id-389 theme-helopizza woocommerce-js pbmit-top-
                                                     <i class="pbmit-base-icon-pen"></i><span
                                                       class="wpcf7-form-control-wrap" data-name="textarea-806">
                                                       <textarea cols="40" rows="10" maxlength="2000"
-                                                        class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                        class="wpcf7-form-control wpcf7-textarea"
                                                         aria-required="true" aria-invalid="false"
                                                         placeholder="How can we help you? Feel free to get in touch!"
                                                         name="textarea-806"></textarea>

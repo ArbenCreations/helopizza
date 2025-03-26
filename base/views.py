@@ -25,7 +25,13 @@ def reservation(request):
     return render(request,'reservation.html')
 
 def contact(request):
-
+    if request.method=='POST':
+        print(request.POST)
+        name=request.POST['your-name']
+        email=request.POST['your-email']
+        tel=request.POST['tel-646']
+        Subject=request.POST['Subject']
+        msg=request.POST['textarea-806']
     return render(request,'contact.html')
 
 
