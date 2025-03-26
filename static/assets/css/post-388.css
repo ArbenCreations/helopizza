@@ -647,3 +647,9 @@ body.rtl .elementor-388 .elementor-element.elementor-element-4ab0a59 {
         padding: 0px 50px !important;
     }
 }
+
+@media(max-width:767px) {
+    .elementor-388 .elementor-element.elementor-element-e932814 {
+        padding: 60px 0px 60px 0px !important;
+    }
+}

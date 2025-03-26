@@ -676,6 +676,14 @@ body.rtl .pbmit-footer-style-2 .pbmit-footer-big-area .pbmit-footer-right .pbmit
     body.rtl .pbmit-footer-style-2 .pbmit-footer-big-area .pbmit-footer-right .pbmit-footer-logo {
         text-align: right
     }
+    .pbmit-footer-style-2 .pbmit-footer-logo {
+        height: 100px;
+        object-fit: cover;
+    }
+    .pbmit-footer-style-2 .pbmit-footer-logo img {
+        object-fit: cover;
+        object-position: center -30px;
+    }
 }
 
 @media (max-width:575px) {

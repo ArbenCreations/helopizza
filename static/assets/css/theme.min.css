@@ -5936,4 +5936,18 @@ body.rtl lottie-player {
         flex-grow: 1;
         flex-basis: 0%;
     }
+    .w100m {
+        width: 100% !important;
+        /* padding: 0; */
+        /* padding-bottom: 20px; */
+    }
+    .HEROICONS {
+        bottom: -17px;
+        right: 91px;
+    }
+}
+
+.HEROICONS {
+    bottom: -17px;
+    right: 150px;
 }
