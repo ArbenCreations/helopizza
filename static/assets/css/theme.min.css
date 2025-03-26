@@ -5930,6 +5930,11 @@ body.rtl lottie-player {
     transform: scaleX(-1)
 }
 
+.HEROICONS {
+    bottom: -17px;
+    right: 150px;
+}
+
 @media (max-width:767px) {
     .pbminfotech-ele-tab-menu .pbmit-tab-content-title {
         width: auto !important;
@@ -5945,9 +5950,4 @@ body.rtl lottie-player {
         bottom: -17px;
         right: 91px;
     }
-}
-
-.HEROICONS {
-    bottom: -17px;
-    right: 150px;
 }
