@@ -548,7 +548,7 @@ page-template-default page page-id-386 theme-helopizza woocommerce-js pbmit-top-
                                         </div>
 
                                         <div class="pbmit-element-posts-wrapper row multi-columns-row">
-                                          {% for product in products|slice:":5" %}
+                                          {% for product in products|dictsort:"id"|slice:":5" %}
                                           <article
                                           class="pbmit-ele pbmit-ele-miconheading pbmit-miconheading-style-6 col-md-12">
                                           <div class="pbmit-ihbox pbmit-ihbox-style-6">
