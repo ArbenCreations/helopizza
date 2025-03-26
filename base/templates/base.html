@@ -600,6 +600,9 @@
         .pbmit-navbar li.mob{
             display:none;
         }
+        .pbmit-icon-wrapper.pbmit-icon-type-icon{
+            font-size:60px;
+        }
         @media screen and (max-width:500px){
             .pbmit-navbar li.mob{
                 display:inline-block;
@@ -613,7 +616,9 @@
             .pbmit-title-bar-wrapper{
                 background-position: -380px top;
             }
-         
+            .pbmit-title-bar-content,  .pbmit-title-bar-wrapper{
+                min-height:350px;
+            }
             .pbmit-element-static-box-style-1 .pbmit-ele-static-box .pbmit-contentbox{
                 height:auto;
             }
@@ -658,15 +663,6 @@
            
     </style>
 
-    <!-- Slick CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
-
-<!-- jQuery (required for Slick) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Slick JS -->
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
     {% block pageCSS %}
     
     {% endblock pageCSS %}
@@ -953,7 +949,7 @@
                                         </a>
                                         </div>
                                     <div class="pbmit-burger-menu-wrapper">
-                                        <div class="pbmit-mobile-menu-bg"></div>
+                                        {% comment %} <div class="pbmit-mobile-menu-bg"></div> {% endcomment %}
                                         <button id="menu-toggle" class="nav-menu-toggle">
 								<i class="pbmit-base-icon-menu-1"></i>
 							</button>
@@ -1535,7 +1531,7 @@
             }
         })();
     </script>
-    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"91c10c533b4a48e9","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"125856bf84ab44059737e93b01aa0fef"}'
+    <script defer src="{% static "assets/js/vcd15cbe7772f49c399c6a5babf22c1241717689176015.js" %}" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"91c10c533b4a48e9","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"125856bf84ab44059737e93b01aa0fef"}'
         crossorigin="anonymous"></script>
 
 
