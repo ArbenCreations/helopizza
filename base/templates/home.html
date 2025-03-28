@@ -351,22 +351,7 @@
     <div class="site-content-wrap">
         <div id="content" class="site-content">
 
-            <div class="pbmit-header-search-form-wrapper">
-                <div class="pbmit-search-close"><svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg"
-                        width="28.163" height="28.163" viewBox="0 0 26.163 26.163">
-                        <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
-                        <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
-                    </svg></div>
-                <form role="search" method="get" class="search-form" action="italian-food/">
-                    <label for="search-form-67c973f50ce23">
-                        <span class="screen-reader-text">Search for:</span>
-                    </label>
-                    <input type="search" id="search-form-67c973f50ce23" class="search-field"
-                        placeholder="Search &hellip;" value="" name="s" />
-                    <button type="submit" class="search-submit" title="Search"><span
-                            class="screen-reader-text">Search</span></button>
-                </form>
-            </div>
+           
             <div id="primary" class="content-area ">
                 <main id="main" class="site-main pbmit-page-content-wrapper">
                     <div id="post-388" class="post-388 page type-page status-publish hentry">
@@ -392,133 +377,161 @@
                                                 Deals & Combos
                                                 </div>
                                 </div>    
-   <section
-                                    class="elementor-section elementor-top-section elementor-element elementor-element-0ad5ce8 elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                                    data-id="0ad5ce8" data-element_type="section"
-                                    data-settings="{"stretch_section":"section-stretched"}">
-                                    <div class="elementor-container elementor-column-gap-no">
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0cbb7dc pbmit-ihbox-one pbmit-bg-color-over-image"
-                                            data-id="0cbb7dc" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="elementor-element elementor-element-4370ac8 elementor-widget elementor-widget-pbmit_icon_heading"
-                                                    data-id="4370ac8" data-element_type="widget"
-                                                    data-widget_type="pbmit_icon_heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
-                                                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
-                                                                    src="{% static '/assets/media/ihbox-col-bg-01.jpg' %}"
-                                                                    alt="Cheesy  Pizza" /></div>
-                                                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
-                                                                    src="{% static '/assets/media/banner-bg-02.png' %}"
-                                                                    alt="Cheesy  Pizza" /></div>
-                                                            <div class="pbmit-ihbox-icon">
-                                                                <div
-                                                                    class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                                                    <img loading="lazy" decoding="async"
-                                                                        src="{% static '/assets/media/img-09.png' %}"
-                                                                        alt="Cheesy  Pizza" /></div>
-                                                            </div>
-                                                            <div class="pbmit-ihbox-contents">
-                                                                <h4 class="pbmit-element-heading">
+<section
+    class="elementor-section elementor-top-section elementor-element elementor-element-0ad5ce8 elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+    data-id="0ad5ce8" data-element_type="section" data-settings="{" stretch_section":"section-stretched"}">
+    <div class="elementor-container elementor-column-gap-no">
+       
+        {% for banner in Banners.banners  %}
+        
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0cbb7dc pbmit-ihbox-one pbmit-bg-color-over-image"
+        data-id="0cbb7dc" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+            <div class="elementor-element elementor-element-4370ac8 elementor-widget elementor-widget-pbmit_icon_heading"
+                data-id="4370ac8" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
+                <div class="elementor-widget-container">
+                    <div class="pbmit-ihbox pbmit-ihbox-style-3">
+                        {% comment %} <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/ihbox-col-bg-01.jpg' %}" alt="Cheesy  Pizza" /></div>
+                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/banner-bg-02.png' %}" alt="Cheesy  Pizza" /></div>
+                            <div class="pbmit-ihbox-icon">
+                                <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                                    <img loading="lazy" decoding="async" src="{% static '/assets/media/img-09.png' %}"
+                                        alt="Cheesy  Pizza" />
+                                </div>
+                            </div> {% endcomment %}
+                        <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
+                                src="{{banner.banner_images_urls.0}}" alt=" {{banner.title}}" /></div>
+                                <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/banner-bg-02.png' %}" alt=" {{banner.title}}" /></div>
+                           
+                        <div class="pbmit-ihbox-contents">
+                            <h4 class="pbmit-element-heading">
 
-                                                                    Today Special
+                                {{banner.title}}
 
-                                                                </h4>
-                                                                <h2 class="pbmit-element-title">
+                            </h4>
+                            <h2 class="pbmit-element-title">
 
-                                                                    Cheesy Pizza
+                                {{banner.description}}
 
-                                                                </h2>
-                                                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a
-                                                                        href="">Order Now</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-dcf4392 pbmit-bg-color-over-image"
-                                            data-id="dcf4392" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="elementor-element elementor-element-b48fd85 elementor-widget elementor-widget-pbmit_icon_heading"
-                                                    data-id="b48fd85" data-element_type="widget"
-                                                    data-widget_type="pbmit_icon_heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
-                                                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
-                                                                    src="{% static '/assets/media/ihbox-col-bg-02.jpg' %}"
-                                                                    alt="Italian Food" /></div>
-                                                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
-                                                                    src="{% static '/assets/media/banner-bg-03-new.png' %}"
-                                                                    alt="Italian Food" /></div>
-                                                            <div class="pbmit-ihbox-icon">
-                                                                <div
-                                                                    class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                                                    <img loading="lazy" decoding="async"
-                                                                        src="{% static '/assets/media/img-08-3.png' %}"
-                                                                        alt="Italian Food" /></div>
-                                                            </div>
-                                                            <div class="pbmit-ihbox-contents">
-                                                                <h4 class="pbmit-element-heading">
+                            </h2>
+                            <div class="pbmit-svg-btn pbmit-ihbox-btn"><a href="{{banner.url}}">Order Now</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+        {% comment %} <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0cbb7dc pbmit-ihbox-one pbmit-bg-color-over-image"
+            data-id="0cbb7dc" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-4370ac8 elementor-widget elementor-widget-pbmit_icon_heading"
+                    data-id="4370ac8" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
+                    <div class="elementor-widget-container">
+                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
+                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/ihbox-col-bg-01.jpg' %}" alt="Cheesy  Pizza" /></div>
+                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/banner-bg-02.png' %}" alt="Cheesy  Pizza" /></div>
+                            <div class="pbmit-ihbox-icon">
+                                <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                                    <img loading="lazy" decoding="async" src="{% static '/assets/media/img-09.png' %}"
+                                        alt="Cheesy  Pizza" />
+                                </div>
+                            </div>
+                            <div class="pbmit-ihbox-contents">
+                                <h4 class="pbmit-element-heading">
 
-                                                                    Best Quality
+                                    Today Special
 
-                                                                </h4>
-                                                                <h2 class="pbmit-element-title">
+                                </h4>
+                                <h2 class="pbmit-element-title">
 
-                                                                    Italian Food
+                                    Cheesy Pizza
 
-                                                                </h2>
-                                                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a
-                                                                        href="">Order Now</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-8635fbd pbmit-ihbox-three pbmit-bg-color-over-image"
-                                            data-id="8635fbd" data-element_type="column">
-                                            <div class="elementor-widget-wrap elementor-element-populated">
-                                                <div class="elementor-element elementor-element-6ea9d4b elementor-widget elementor-widget-pbmit_icon_heading"
-                                                    data-id="6ea9d4b" data-element_type="widget"
-                                                    data-widget_type="pbmit_icon_heading.default">
-                                                    <div class="elementor-widget-container">
-                                                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
-                                                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
-                                                                    src="{% static '/assets/media/ihbox-col-bg-03.jpg' %}"
-                                                                    alt="Hottest  Pizza" /></div>
-                                                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
-                                                                    src="{% static '/assets/media/banner-bg-04.png' %}"
-                                                                    alt="Hottest  Pizza" /></div>
-                                                            <div class="pbmit-ihbox-icon">
-                                                                <div
-                                                                    class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                                                    <img loading="lazy" decoding="async"
-                                                                        src="{% static '/assets/media/img-09-3.png' %}"
-                                                                        alt="Hottest  Pizza" /></div>
-                                                            </div>
-                                                            <div class="pbmit-ihbox-contents">
-                                                                <h4 class="pbmit-element-heading">
+                                </h2>
+                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a href="">Order Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-dcf4392 pbmit-bg-color-over-image"
+            data-id="dcf4392" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-b48fd85 elementor-widget elementor-widget-pbmit_icon_heading"
+                    data-id="b48fd85" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
+                    <div class="elementor-widget-container">
+                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
+                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/ihbox-col-bg-02.jpg' %}" alt="Italian Food" /></div>
+                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/banner-bg-03-new.png' %}" alt="Italian Food" /></div>
+                            <div class="pbmit-ihbox-icon">
+                                <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                                    <img loading="lazy" decoding="async" src="{% static '/assets/media/img-08-3.png' %}"
+                                        alt="Italian Food" />
+                                </div>
+                            </div>
+                            <div class="pbmit-ihbox-contents">
+                                <h4 class="pbmit-element-heading">
 
-                                                                    Today Special
+                                    Best Quality
 
-                                                                </h4>
-                                                                <h2 class="pbmit-element-title">
+                                </h4>
+                                <h2 class="pbmit-element-title">
 
-                                                                    Hottest Pizza
+                                    Italian Food
 
-                                                                </h2>
-                                                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a
-                                                                        href="">Order Now</a></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
+                                </h2>
+                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a href="">Order Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-8635fbd pbmit-ihbox-three pbmit-bg-color-over-image"
+            data-id="8635fbd" data-element_type="column">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-6ea9d4b elementor-widget elementor-widget-pbmit_icon_heading"
+                    data-id="6ea9d4b" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
+                    <div class="elementor-widget-container">
+                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
+                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/ihbox-col-bg-03.jpg' %}" alt="Hottest  Pizza" /></div>
+                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
+                                    src="{% static '/assets/media/banner-bg-04.png' %}" alt="Hottest  Pizza" /></div>
+                            <div class="pbmit-ihbox-icon">
+                                <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                                    <img loading="lazy" decoding="async" src="{% static '/assets/media/img-09-3.png' %}"
+                                        alt="Hottest  Pizza" />
+                                </div>
+                            </div>
+                            <div class="pbmit-ihbox-contents">
+                                <h4 class="pbmit-element-heading">
+
+                                    Today Special
+
+                                </h4>
+                                <h2 class="pbmit-element-title">
+
+                                    Hottest Pizza
+
+                                </h2>
+                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a href="">Order Now</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+</section>
                                 {% comment %} <div class="elementor-section elementor-top-section elementor-element elementor-element-0856cc4 elementor-section-full_width elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-height-default elementor-section-height-default"
                                     data-id="0856cc4" data-element_type="section"
                                     data-settings="{"stretch_section":"section-stretched"}">
