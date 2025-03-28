@@ -592,10 +592,11 @@
     <style>
         /** Mega Menu CSS: fs **/
         .mybn a{
-            background:transparent;
+            background:#fda723;
             border:1px solid white;
             border-radius:100px !important;
             padding: 16px 25px !important;
+            color: black !important;
         }
         .pbmit-navbar li.mob{
             display:none;
@@ -618,6 +619,7 @@
             z-index:5;
             align-items:center;
             flex-wrap:wrap;
+            border-radius: 20px;
         }
         .section2 .label2 i{
             color:green;
@@ -650,7 +652,7 @@
                 margin-top:50px;
             }
             .pbmit-title-bar-wrapper{
-                background-position: -380px top;
+                {% comment %} background-position: -380px top; {% endcomment %}
             }
             .pbmit-title-bar-content,  .pbmit-title-bar-wrapper{
                 min-height:350px;
