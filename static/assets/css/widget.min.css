@@ -667,7 +667,7 @@ body.rtl .pbmit-footer-style-2 .pbmit-footer-big-area .pbmit-footer-right .pbmit
         max-width: 100%!important
     }
     .pbmit-footer-style-2 .pbmit-footer-big-area-wrapper .pbmit-footer-big-area {
-        padding-top: 70px
+        padding-top: 0px
     }
     .pbmit-footer-style-2 .pbmit-footer-big-area .pbmit-footer-right .pbmit-footer-logo {
         text-align: left;
@@ -677,7 +677,7 @@ body.rtl .pbmit-footer-style-2 .pbmit-footer-big-area .pbmit-footer-right .pbmit
         text-align: right
     }
     .pbmit-footer-style-2 .pbmit-footer-logo {
-        height: 100px;
+        height: 140px;
         object-fit: cover;
     }
     .pbmit-footer-style-2 .pbmit-footer-logo img {
