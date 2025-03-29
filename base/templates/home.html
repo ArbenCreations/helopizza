@@ -64,6 +64,82 @@
           scale:1 1;
         }
       }
+
+      
+h1.mainTitle {
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: .9em;
+    font-weight: 900;
+    line-height: 1;
+    color:#fda723;
+}
+
+h1.mainTitle:hover {
+    animation-play-state: paused;
+}
+
+
+
+@keyframes text-shadow {
+    0% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+
+    20% {  
+        transform: translateY(-1em);
+        text-shadow: 
+            0 0.125em 0 #0c2ffb, 
+            0 0.25em 0 #2cfcfd, 
+            0 -0.125em 0 #fb203b, 
+            0 -0.25em 0 #fefc4b;
+    }
+
+    40% {  
+        transform: translateY(0.5em);
+        text-shadow: 
+            0 -0.0625em 0 #0c2ffb, 
+            0 -0.125em 0 #2cfcfd, 
+            0 0.0625em 0 #fb203b, 
+            0 0.125em 0 #fefc4b;
+    }
+    
+   60% {
+        transform: translateY(-0.25em);
+        text-shadow: 
+            0 0.03125em 0 #0c2ffb, 
+            0 0.0625em 0 #2cfcfd, 
+            0 -0.03125em 0 #fb203b, 
+            0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {  
+        transform: translateY(0);
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 #2cfcfd, 
+            0 0 0 #fb203b, 
+            0 0 0 #fefc4b;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
+@media and screen(min-widthL500px){
+    h1.mainTitle {
+      
+        font-size:1em;
+      
+    }
+}
     
 </style>
 {% endblock pageCSS %}
@@ -95,31 +171,14 @@
                                                 <h2 class="pbmit-element-title" style="perspective: 400px;">
                                                     <div style="display: block; text-align: start; position: relative;" class="split-line">
                                                         <div style="position:relative;display:inline-block;">
-                                                            <p class="split-text text1">Crafted Bliss</p>
-                                                            
-                                                            
+
+                                                            <h1 class='mainTitle'>Crafted Bliss</h1>
+                                                            {% comment %} <p class="split-text text1">Crafted Bliss</p> {% endcomment %}
+                                                        
                                                         </div>
                                                         
                                                     </div>
-                                                    <div class='d-flex position-absolute HEROICONS'>
-                                                        <div class="elementor-element elementor-element-9071845 pbmit-animation-style2 elementor-widget__width-initial elementor-widget elementor-widget-image active"
-                                                        data-id="9071845" data-element_type="widget"
-                                                        data-widget_type="image.default">
-                                                        <div class="elementor-widget-container">
-                                                            <img loading="lazy" decoding="async" width="59" height="28"
-                                                                src="{%static '/assets/media/tiltle-dot-img-02.png' %}"
-                                                                class="attachment-full size-full wp-image-1339" alt="">
-                                                        </div>
-                                                    </div>
-                                            <div class="elementor-element elementor-element-8bb4d33 pbmit-animation-style2 elementor-widget__width-initial elementor-widget elementor-widget-image active"
-                                                data-id="8bb4d33" data-element_type="widget"
-                                                data-widget_type="image.default">
-                                                <div class="elementor-widget-container">
-                                                    <img loading="lazy" decoding="async" width="40" height="22"
-                                                        src="{%static '/assets/media/tiltle-dot-img-01.png' %}"
-                                                        class="attachment-full size-full wp-image-1338" alt="">
-                                                </div>
-                                            </div>
+                                                   
                                                 </h2>
                                                 <div
                                                     class='d-xl-none d-block mobile-pizza pbmit-animation-style2  position-relative mb-4'>
