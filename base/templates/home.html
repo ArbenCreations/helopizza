@@ -35,97 +35,262 @@
     .elementor-388 .elementor-element.elementor-element-e932814 {
         padding: 0px;
     }
-    :root{
-        --shadow:#000;
-        --invertShadow:#fff;
-        --fz:3rem;
-      }
-    .text1 div span{
-        display:inline-block;
-        transform-style:preserve-3d;
-          transform-origin:bottom;
-        text-transform:uppercase;
-        animation: anim var(--duration) linear infinite alternate;
-        animation-delay:var(--delay);
-        font-weight:bold;
-        font-size:5rem;
-        color:#fda723;
-        text-shadow:0px 0px 2px var(--innerShadow),0px 0px 2px var(--innerShadow),0px 0px 2px var(--innerShadow),0px 0px 2px var(--innerShadow);
-        --innerShadow:var(--shadow);
-        --inneroppoShadow:var(--invertShadow);
-      }
-      @keyframes anim {
-        0%{
-          text-shadow:0px 0px 2px var(--innerShadow),0px 0px 2px var(--innerShadow),0px 0px 2px var(--innerShadow),0px 0px 2px var(--innerShadow);
-          scale:1 0;
-        }
-        100%{
-          text-shadow:0px 0px 2px var(--inneroppoShadow),0px 0px 2px var(--inneroppoShadow),0px 0px 2px var(--inneroppoShadow),0px 0px 2px var(--inneroppoShadow);
-          scale:1 1;
-        }
-      }
-
-      
-h1.mainTitle {
-    animation: text-shadow 1.5s ease-in-out infinite;
-    font-size: .9em;
-    font-weight: 900;
-    line-height: 1;
-    color:#fda723;
-}
-
-h1.mainTitle:hover {
-    animation-play-state: paused;
-}
-
-
-
-@keyframes text-shadow {
-    0% {  
-        transform: translateY(0);
-        text-shadow: 
-            0 0 0 #0c2ffb, 
-            0 0 0 #2cfcfd, 
-            0 0 0 #fb203b, 
-            0 0 0 #fefc4b;
-    }
-
-    20% {  
-        transform: translateY(-1em);
-        text-shadow: 
-            0 0.125em 0 #0c2ffb, 
-            0 0.25em 0 #2cfcfd, 
-            0 -0.125em 0 #fb203b, 
-            0 -0.25em 0 #fefc4b;
-    }
-
-    40% {  
-        transform: translateY(0.5em);
-        text-shadow: 
-            0 -0.0625em 0 #0c2ffb, 
-            0 -0.125em 0 #2cfcfd, 
-            0 0.0625em 0 #fb203b, 
-            0 0.125em 0 #fefc4b;
-    }
     
-   60% {
-        transform: translateY(-0.25em);
-        text-shadow: 
-            0 0.03125em 0 #0c2ffb, 
-            0 0.0625em 0 #2cfcfd, 
-            0 -0.03125em 0 #fb203b, 
-            0 -0.0625em 0 #fefc4b;
-    }
+    
+.content-slider {
+    width: 100%;
+    height: 120px;
+    color:#fda723;
+  }
+  
+  .slider {
+    height: 120px;
+    width: 680px;
+    margin: 40px auto 0;
+    overflow: visible;
+    position: relative;
+  }
+  
+  .mask {
+    overflow: hidden;
+    height: 120px;
+  }
+  
+  .slider ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .slider li {
+    width: 580px;
+    height: 120px;
+    position: absolute;
+    top: -325px;
+    list-style: none;
+  }
+  
+  .slider .quote {
+    font-size: 40px;
+    font-style: italic;
+  }
+  
+  .slider .source {
+    font-size: 20px;
+    text-align: right;
+  }
+  
+  .slider li.anim1 {
+    animation: cycle 15s linear infinite;
+  }
+  
+  .slider li.anim2 {
+    animation: cycle2 15s linear infinite;
+  }
+  
+  .slider li.anim3 {
+    animation: cycle3 15s linear infinite;
+  }
+  
 
-    80% {  
-        transform: translateY(0);
-        text-shadow: 
-            0 0 0 #0c2ffb, 
-            0 0 0 #2cfcfd, 
-            0 0 0 #fb203b, 
-            0 0 0 #fefc4b;
+  
+  .slider:hover li {
+    animation-play-state: paused;
+  }
+  .elementor-1124 .elementor-element.elementor-element-c07c752 .pbmit-element-title{
+    line-height:60px;
+  }
+  @keyframes cycle {
+    0% {
+      top: 0px;
     }
-}
+    4% {
+      top: 0px;
+    }
+    16% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+    20% {
+      top: 325px;
+      opacity: 0;
+      z-index: 0;
+    }
+    21% {
+      top: -325px;
+      opacity: 0;
+      z-index: -1;
+    }
+    50% {
+      top: -325px;
+      opacity: 0;
+      z-index: -1;
+    }
+    92% {
+      top: -325px;
+      opacity: 0;
+      z-index: 0;
+    }
+    96% {
+      top: -325px;
+      opacity: 0;
+    }
+    100% {
+      top: 0px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes cycle2 {
+    0% {
+      top: -325px;
+      opacity: 0;
+    }
+    16% {
+      top: -325px;
+      opacity: 0;
+    }
+    20% {
+      top: 0px;
+      opacity: 1;
+    }
+    24% {
+      top: 0px;
+      opacity: 1;
+    }
+    36% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+    40% {
+      top: 325px;
+      opacity: 0;
+      z-index: 0;
+    }
+    41% {
+      top: -325px;
+      opacity: 0;
+      z-index: -1;
+    }
+    100% {
+      top: -325px;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  
+  @keyframes cycle3 {
+    0% {
+      top: -325px;
+      opacity: 0;
+    }
+    36% {
+      top: -325px;
+      opacity: 0;
+    }
+    40% {
+      top: 0px;
+      opacity: 1;
+    }
+    44% {
+      top: 0px;
+      opacity: 1;
+    }
+    56% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+  
+      80% {
+        top: 0px;
+        opacity: 1;
+      }
+      84% {
+        top: 0px;
+        opacity: 1;
+      }
+    96% {
+        top: 0px;
+        opacity: 1;
+        z-index: 0;
+      }
+      100% {
+        top: 325px;
+        opacity: 0;
+        z-index: 0;
+      }
+  }
+  
+  @keyframes cycle4 {
+    0% {
+      top: -325px;
+      opacity: 0;
+    }
+    56% {
+      top: -325px;
+      opacity: 0;
+    }
+    60% {
+      top: 0px;
+      opacity: 1;
+    }
+    64% {
+      top: 0px;
+      opacity: 1;
+    }
+    76% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+    80% {
+      top: 325px;
+      opacity: 0;
+      z-index: 0;
+    }
+    81% {
+      top: -325px;
+      opacity: 0;
+      z-index: -1;
+    }
+    100% {
+      top: -325px;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  
+  @keyframes cycle5 {
+    0% {
+      top: -325px;
+      opacity: 0;
+    }
+    76% {
+      top: -325px;
+      opacity: 0;
+    }
+    80% {
+      top: 0px;
+      opacity: 1;
+    }
+    84% {
+      top: 0px;
+      opacity: 1;
+    }
+    96% {
+      top: 0px;
+      opacity: 1;
+      z-index: 0;
+    }
+    100% {
+      top: 325px;
+      opacity: 0;
+      z-index: 0;
+    }
+  }
 
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -133,12 +298,43 @@ h1.mainTitle:hover {
       transition: none !important;
     }
 }
-@media and screen(min-widthL500px){
+@media screen and (max-width:500px){
     h1.mainTitle {
       
         font-size:1em;
-      
     }
+    .content-slider {
+        width: 100%;
+        height: 100px;
+        color:#fda723;
+      }
+      
+      .slider {
+        height: 100px;
+        width: 300px;
+        margin: 0px auto 0;
+        overflow: visible;
+        position: relative;
+      }
+      
+      .mask {
+        overflow: hidden;
+        height: 100px;
+      }
+      .slider li {
+        width: 300px;
+        height: 100px;
+        position: absolute;
+        top: -325px;
+        list-style: none;
+      }
+      .elementor-1124 .elementor-element.elementor-element-c07c752 .pbmit-element-title{
+        line-height:25px;
+      }
+      .slider .quote {
+        font-size: 20px;
+        font-style: italic;
+      }
 }
     
 </style>
@@ -168,11 +364,34 @@ h1.mainTitle:hover {
                                         data-id="c07c752" data-element_type="widget" data-widget_type="pbmit_custom_heading.default">
                                         <div class="elementor-widget-container">
                                             <div class="pbmit-custom-heading -align animation-style1">
-                                                <h2 class="pbmit-element-title" style="perspective: 400px;">
+                                                <h2 class="pbmit-element-title lh-0" style="perspective: 400px; line-height;0px;">
                                                     <div style="display: block; text-align: start; position: relative;" class="split-line">
                                                         <div style="position:relative;display:inline-block;">
 
-                                                            <h1 class='mainTitle'>Crafted Bliss</h1>
+                                                            
+<div class="content-slider">
+    <div class="slider">
+      <div class="mask">
+        <ul>
+          <li class="anim1">
+            <div class="quote">Hot, Fresh, & Irresistible – Your Perfect Slice Awaits!</div>
+           
+          </li>
+          <li class="anim2">
+            <div class="quote">From Oven to Table – Taste the Difference in Every Bite!</div>
+           
+          </li>
+       
+          <li class="anim3">
+            <div class="quote">Cheesy, Crispy, & Loaded with Flavor – Order Now!</div>
+            
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+                                                            {% comment %} <h1 class='mainTitle'>Crafted Bliss</h1> {% endcomment %}
                                                             {% comment %} <p class="split-text text1">Crafted Bliss</p> {% endcomment %}
                                                         
                                                         </div>
@@ -1629,7 +1848,7 @@ h1.mainTitle:hover {
                                     </div>
                                 </section>
                              
-                                <div class="p-0 elementor-section elementor-top-section elementor-element elementor-element-5bdb8bc elementor-section-stretched pbmit-bg-img-hide pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                <div class="pb-xl-5 mb-xl-5 mb-0 p-0 elementor-section elementor-top-section elementor-element elementor-element-5bdb8bc elementor-section-stretched pbmit-bg-img-hide pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                     data-id="5bdb8bc" data-element_type="section"
                                     data-settings="{"stretch_section":"section-stretched","background_background":"classic"}">
                                     <div class="elementor-container elementor-column-gap-no">

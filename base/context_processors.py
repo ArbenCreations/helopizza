@@ -115,3 +115,7 @@ def categories_processor(request):
         asyncio.run(update_local_data())  # Trigger background update
 
     return {"categories": categories or [], "products": products or [],"Banners":Banners or []}
+async def preload_data():
+    await update_local_data()
+
+asyncio.run(preload_data())  # Run this once on startup
