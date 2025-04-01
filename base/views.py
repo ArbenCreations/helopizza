@@ -1,4 +1,10 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404,redirect
+from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.contrib import messages
+
+from django.http import JsonResponse
+
 # Create your views here.
 from .models import MenuItem, Category
 
@@ -25,16 +31,28 @@ def reservation(request):
     return render(request,'reservation.html')
 
 def contact(request):
-    if request.method=='POST':
-        print(request.POST)
-        name=request.POST['your-name']
-        email=request.POST['your-email']
-        tel=request.POST['tel-646']
-        Subject=request.POST['Subject']
-        msg=request.POST['textarea-806']
-    return render(request,'contact.html')
+    if request.method == 'POST':
+        name = request.POST.get('your-name', '')
+        email = request.POST.get('your-email', '')
+        tel = request.POST.get('tel-646', '')
+        subject = request.POST.get('Subject', 'No Subject')
+        msg = request.POST.get('textarea-806', '')
 
+        message = f"Name: {name}\nEmail: {email}\nPhone: {tel}\n\nMessage:\n{msg}"
 
+        try:
+            send_mail(
+                subject,
+                message,
+                'pricetrackerprod@gmail.com',  # Sender email
+                ['hamu.dhillon@gmail.com'],  # Recipient email
+                fail_silently=False,
+            )
+            return JsonResponse({"status": "success", "message": "Your message has been sent successfully!"})
+        except Exception as e:
+            return JsonResponse({"status": "error", "message": f"Error sending email: {e}"})
+
+    return render(request, 'contact.html')
 def food(request,cid,categoryName):
     category = get_object_or_404(Category,id=cid)
     menu_items = MenuItem.objects.filter(category_items=category)

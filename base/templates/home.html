@@ -310,6 +310,10 @@
       
         font-size:1em;
     }
+    .pbmit-ihbox-overlay-image.banner img{
+        object-fit:cover;
+        object-position:center;
+    }
     .content-slider {
         width: 100%;
         height: 120px;
@@ -694,7 +698,7 @@
 <section
     class="elementor-section elementor-top-section elementor-element elementor-element-0ad5ce8 elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="0ad5ce8" data-element_type="section" data-settings="{" stretch_section":"section-stretched"}">
-    <div class="elementor-container elementor-column-gap-no">
+    <div class="elementor-container elementor-column-gap-no gap-xl-0 gap-5">
        
         {% for banner in Banners.banners  %}
         
@@ -715,8 +719,8 @@
                                         alt="Cheesy  Pizza" />
                                 </div>
                             </div> {% endcomment %}
-                        <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
-                                src="{{banner.banner_images_urls.0}}" alt=" {{banner.title}}" /></div>
+                        <div class="pbmit-ihbox-overlay-image banner"><img loading="lazy" decoding="async"
+                                src="{{banner.banner_images_urls.0}}" alt=" {{banner.title}}"  /></div>
                                 <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
                                     src="{% static '/assets/media/banner-bg-02.png' %}" alt=" {{banner.title}}" /></div>
                            
