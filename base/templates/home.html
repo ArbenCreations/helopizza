@@ -700,7 +700,7 @@
     data-id="0ad5ce8" data-element_type="section" data-settings="{" stretch_section":"section-stretched"}">
     <div class="elementor-container elementor-column-gap-no gap-xl-0 gap-5">
        
-        {% for banner in Banners.banners  %}
+        {% for banner in Banners.banners|slice:":2" %}
         
         <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0cbb7dc pbmit-ihbox-one pbmit-bg-color-over-image"
         data-id="0cbb7dc" data-element_type="column">
