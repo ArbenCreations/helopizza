@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-46tmzwi=&8yec^7ujh3upw3ve^w8#a5@v6!d567x2!!wzvm2z_
 DEBUG = True
 
 ALLOWED_HOSTS = ['helopizza.ca','127.0.0.1','localhost','*']
-
+CSRF_TRUSTED_ORIGINS = ["https://helopizza.ca"]
+SECURE_SSL_REDIRECT = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Application definition
 
