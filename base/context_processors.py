@@ -93,7 +93,7 @@ def load_from_file(filepath):
 
 async def update_local_data():
     """Fetch latest data and save it to local files."""
-    categories, products,banners = ['','','']
+    categories, products, banners = await fetch_cats(), await fetch_menu(), await fetch_banner()
 
     if banners:
         save_to_file(BANNERS_FILE, banners.get("data", []))
