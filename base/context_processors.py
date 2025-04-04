@@ -93,7 +93,7 @@ def load_from_file(filepath):
 
 async def update_local_data():
     """Fetch latest data and save it to local files."""
-    categories, products,banners = await asyncio.gather(fetch_cats(), fetch_menu(),fetch_banner())
+    categories, products,banners = ['','','']
 
     if banners:
         save_to_file(BANNERS_FILE, banners.get("data", []))
