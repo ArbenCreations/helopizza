@@ -118,4 +118,4 @@ def categories_processor(request):
 async def preload_data():
     await update_local_data()
 
-asyncio.run(preload_data())  # Run this once on startup
+# asyncio.run(preload_data())  # Run this once on startup
