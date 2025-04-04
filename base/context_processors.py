@@ -20,58 +20,58 @@ PRODUCTS_FILE = os.path.join(DATA_DIR, "products.json")
 CACHE_TIMEOUT = timedelta(minutes=30)
 
 
-async def fetch_menu():
-    """Fetch menu products from external API asynchronously."""
-    try:
-        async with httpx.AsyncClient(timeout=5) as client:
-            response = await client.post(
-                API_URL,
-                headers={"Content-Type": "application/json"},
-                json={"vendor_id": VENDOR_ID, "page_number": 1, "page_size": 100},
-            )
-            response.raise_for_status()
-            return response.json()
-    except httpx.RequestError as e:
-        logger.error(f"Failed to fetch menu: {e}")
-        return None
+# async def fetch_menu():
+#     """Fetch menu products from external API asynchronously."""
+#     try:
+#         async with httpx.AsyncClient(timeout=5) as client:
+#             response = await client.post(
+#                 API_URL,
+#                 headers={"Content-Type": "application/json"},
+#                 json={"vendor_id": VENDOR_ID, "page_number": 1, "page_size": 100},
+#             )
+#             response.raise_for_status()
+#             return response.json()
+#     except httpx.RequestError as e:
+#         logger.error(f"Failed to fetch menu: {e}")
+#         return None
 
 
-async def fetch_banner():
-    """Fetch Banner  from external API asynchronously."""
-    try:
-        async with httpx.AsyncClient(timeout=5) as client:
-            response = await client.post(
-                Banner_url,
-                headers={"Content-Type": "application/json"},
-                json={"vendor_id": VENDOR_ID, "page_number": 1, "page_size": 100},
-            )
-            response.raise_for_status()
-            return response.json()
-    except httpx.RequestError as e:
-        logger.error(f"Failed to fetch menu: {e}")
-        return None
+# async def fetch_banner():
+#     """Fetch Banner  from external API asynchronously."""
+#     try:
+#         async with httpx.AsyncClient(timeout=5) as client:
+#             response = await client.post(
+#                 Banner_url,
+#                 headers={"Content-Type": "application/json"},
+#                 json={"vendor_id": VENDOR_ID, "page_number": 1, "page_size": 100},
+#             )
+#             response.raise_for_status()
+#             return response.json()
+#     except httpx.RequestError as e:
+#         logger.error(f"Failed to fetch menu: {e}")
+#         return None
 
 
-async def fetch_cats():
-    """Fetch menu categories from external API asynchronously."""
-    try:
-        async with httpx.AsyncClient(timeout=5) as client:
-            response = await client.get(
-                f"https://api.utellorders.ca/api/v1/products/{VENDOR_ID}/get_product_categories",
-                headers={"Content-Type": "application/json"},
-            )
-            response.raise_for_status()
-            return response.json()
-    except httpx.RequestError as e:
-        logger.error(f"Failed to fetch categories: {e}")
-        return None
+# async def fetch_cats():
+#     """Fetch menu categories from external API asynchronously."""
+#     try:
+#         async with httpx.AsyncClient(timeout=5) as client:
+#             response = await client.get(
+#                 f"https://api.utellorders.ca/api/v1/products/{VENDOR_ID}/get_product_categories",
+#                 headers={"Content-Type": "application/json"},
+#             )
+#             response.raise_for_status()
+#             return response.json()
+#     except httpx.RequestError as e:
+#         logger.error(f"Failed to fetch categories: {e}")
+#         return None
 
 
-def save_to_file(filepath, data):
-    """Save data to a local JSON file."""
-    os.makedirs(DATA_DIR, exist_ok=True)  # Ensure directory exists
-    with open(filepath, "w", encoding="utf-8") as f:
-        json.dump({"timestamp": datetime.utcnow().isoformat(), "data": data}, f)
+# def save_to_file(filepath, data):
+#     """Save data to a local JSON file."""
+#     os.makedirs(DATA_DIR, exist_ok=True)  # Ensure directory exists
+#     with open(filepath, "w", encoding="utf-8") as f:
+#         json.dump({"timestamp": datetime.utcnow().isoformat(), "data": data}, f)
 
 
 def load_from_file(filepath):
@@ -91,18 +91,18 @@ def load_from_file(filepath):
     return None
 
 
-async def update_local_data():
-    """Fetch latest data and save it to local files."""
-    categories, products, banners = ["","",""]
+# async def update_local_data():
+#     """Fetch latest data and save it to local files."""
+#     categories, products, banners = ["","",""]
 
-    if banners:
-        save_to_file(BANNERS_FILE, banners.get("data", []))
+#     if banners:
+#         save_to_file(BANNERS_FILE, banners.get("data", []))
 
-    if categories:
-        save_to_file(CATEGORIES_FILE, categories.get("data", []))
+#     if categories:
+#         save_to_file(CATEGORIES_FILE, categories.get("data", []))
 
-    if products:
-        save_to_file(PRODUCTS_FILE, products.get("data", []))
+#     if products:
+#         save_to_file(PRODUCTS_FILE, products.get("data", []))
 
 
 def categories_processor(request):
@@ -111,11 +111,11 @@ def categories_processor(request):
     products = load_from_file(PRODUCTS_FILE)
     Banners=load_from_file(BANNERS_FILE)
 
-    if categories is None or products is None or Banners is None:
-        asyncio.run(update_local_data())  # Trigger background update
+    # if categories is None or products is None or Banners is None:
+    #     asyncio.run(update_local_data())  # Trigger background update
 
     return {"categories": categories or [], "products": products or [],"Banners":Banners or []}
-async def preload_data():
-    await update_local_data()
+# async def preload_data():
+#     await update_local_data()
 
 # asyncio.run(preload_data())  # Run this once on startup
