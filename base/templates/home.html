@@ -421,7 +421,7 @@
                                     '>
                                                 </div>
                                                 <p class='fs-4 d-xl-block d-none'>
-                                                    Each slice of pizza we serve at Hello Pizza in Alberta delivers a
+                                                    Each slice of pizza we serve at Hello Pizza in Blairmore delivers a
                                                     narrative. Each bite enables you to experience familiarity with
                                                     home.
                                                 </p>
@@ -699,7 +699,6 @@
     class="elementor-section elementor-top-section elementor-element elementor-element-0ad5ce8 elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="0ad5ce8" data-element_type="section" data-settings="{" stretch_section":"section-stretched"}">
     <div class="elementor-container elementor-column-gap-no gap-xl-0 gap-5">
-       
         {% for banner in Banners.banners|slice:":2" %}
         
         <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0cbb7dc pbmit-ihbox-one pbmit-bg-color-over-image"
@@ -1011,10 +1010,10 @@
                                                                                     <img loading="lazy" fetchpriority="high"
                                                                                         decoding="async" width="299"
                                                                                         height="534"
-                                                                                        src="{% static '/assets/media/about-img-01.jpg' %}"
+                                                                                        src="{% static '/assets/media/1.png' %}"
                                                                                         class="rounded-3 overflow-hidden attachment-full size-full wp-image-152"
                                                                                         alt=""
-                                                                                        sizes="(max-width: 299px) 100vw, 299px" />
+                                                                                       />
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1030,10 +1029,11 @@
                                                                                 <div class="elementor-widget-container">
                                                                                     <img loading="lazy" decoding="async" width="299"
                                                                                         height="534"
-                                                                                        src="{% static '/assets/media/about-img-02.jpg' %}"
+                                                                                        src="{% static '/assets/media/2.png' %}"
                                                                                         class="rounded-3 overflow-hidden mt-xl-5 attachment-full size-full wp-image-151"
                                                                                         alt=""
-                                                                                        sizes="(max-width: 299px) 100vw, 299px" />
+                                                                                        style='height:600px;object-fit:cover;object-position:center;'
+                                                                                         />
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1699,11 +1699,11 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="pbmit-ihbox-contents">
-                                                                                <h2 class="pbmit-element-title">
+                                                                                {% comment %} <h2 class="pbmit-element-title">
 
                                                                                     Delivery in <br> 30 minutes
 
-                                                                                </h2>
+                                                                                </h2> {% endcomment %}
                                                                                 {% comment %} <p>
                                                                                     Perfectly prepared dishes deserve
                                                                                     immediate delivery without long
@@ -1734,12 +1734,12 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="pbmit-ihbox-contents">
-                                                                                <h2 class="pbmit-element-title">
+                                                                                {% comment %} <h2 class="pbmit-element-title">
 
                                                                                     Free Delivery on <br> Orders Over
                                                                                     75$
 
-                                                                                </h2>
+                                                                                </h2> {% endcomment %}
                                                                                 {% comment %} <p>
                                                                                     Expect a free delivery for orders
                                                                                     valuing $75 or more.
@@ -1769,11 +1769,11 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="pbmit-ihbox-contents">
-                                                                                <h2 class="pbmit-element-title">
+                                                                                {% comment %} <h2 class="pbmit-element-title">
                                                                                     Straight to <br> Your Doorstep
 
 
-                                                                                </h2>
+                                                                                </h2> {% endcomment %}
                                                                                 {% comment %} <p>
                                                                                     Just tell us your address and our
                                                                                     deliveryman will be there with your

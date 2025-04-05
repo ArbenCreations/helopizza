@@ -28,7 +28,7 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
         </div>
         <div class="pbmit-breadcrumb">
           <div class="pbmit-breadcrumb-inner">
-            <span><a title="Go to helopizza Italian Food." href="/" class="home"><span>Hello
+            <span><a title="Go to helopizza Italian Food." href="{% url "home" %}" class="home"><span>Hello
                   Pizza</span></a></span><span class="sep"><i class="pbmit-base-icon-angle-right"></i></span><span><span
                 class="post post-page current-item">About Us</span></span>
           </div>
@@ -53,7 +53,7 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
             <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
           </svg>
         </div>
-        <form role="search" method="get" class="search-form" action="/">
+        <form role="search" method="get" class="search-form" action="">
           <label for="search-form-67cc8a7066399">
             <span class="screen-reader-text">Search for:</span>
           </label>
@@ -199,9 +199,9 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                                   data-id="761ea8b" data-element_type="widget" data-widget_type="image.default">
                                   <div class="elementor-widget-container">
                                     <img loading="lazy" fetchpriority="high" decoding="async" width="299" height="534"
-                                      src="{% static '/assets/media/about-img-01.jpg' %}"
+                                      src="{% static '/assets/media/1.png' %}"
                                       class="attachment-full size-full wp-image-152" alt=""
-                                      sizes="(max-width: 299px) 100vw, 299px" />
+                                      />
                                   </div>
                                 </div>
                               </div>
@@ -215,9 +215,10 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                                   data-id="fb2943d" data-element_type="widget" data-widget_type="image.default">
                                   <div class="elementor-widget-container">
                                     <img loading="lazy" decoding="async" width="299" height="534"
-                                      src="{% static '/assets/media/about-img-02.jpg' %}"
+                                      src="{% static '/assets/media/2.png' %}"
+                                      style="height:600px; object-fit:cover; object-position:center;"
                                       class="attachment-full size-full wp-image-151" alt=""
-                                      sizes="(max-width: 299px) 100vw, 299px" />
+                                      />
                                   </div>
                                 </div>
                               </div>
@@ -233,7 +234,7 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                                   <img loading="lazy" decoding="async" width="299" height="534"
                                     src="{% static '/assets/media/pizza-img-04.jpg' %}"
                                     class="attachment-full size-full wp-image-151" alt=""
-                                    sizes="(max-width: 299px) 100vw, 299px" />
+                                  />
                                 </div>
                               </div>
                             </div>
@@ -360,7 +361,7 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                     </div>
                   </div>
                   <div class="elementor-container elementor-column-gap-no  mb-xl-5 text-center justify-content-center">
-                      <img src='{% static "assets/media/pizza-img-01.png" %}' class='img-fluid'/> 
+                      <img src='{% static "assets/media/pizza2.png" %}' class='w-25 rounded-circle rounded img-fluid'/> 
                   </div>
                 </div>
                 <div
@@ -733,9 +734,9 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                   class="elementor-section elementor-top-section elementor-element elementor-element-8cfa297 pbmit-bg-color-yes pbmit-elementor-bg-color-globalcolor pbmit-text-color-white pbmit-bg-image-over-color elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                   data-id="8cfa297" data-element_type="section"
                   data-settings='{"stretch_section":"section-stretched","background_background":"classic"}'>
-                  <div class="elementor-container elementor-column-gap-no">
+                  <div class="elementor-container elementor-column-gap-no justify-content-center">
                     <div
-                      class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-cfb9729 pbmit-bg-color-over-image"
+                      class="elementor-column elementor-col-25 text-center elementor-top-column elementor-element elementor-element-cfb9729 pbmit-bg-color-over-image"
                       data-id="cfb9729" data-element_type="column">
                       <div class="elementor-widget-wrap elementor-element-populated">
                         <div
@@ -753,11 +754,11 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                                   <h4 class="pbmit-fid-inner">
                                     <span class="pbmit-fid"></span>
                                     <span class="pbmit-number-rotate" data-appear-animation="animateDigits"
-                                      data-from="0" data-to="12" data-interval="5" data-before="" data-before-style=""
+                                      data-from="0" data-to="3" data-interval="5" data-before="" data-before-style=""
                                       data-after="" data-after-style="">
-                                      12
+                                      3
                                     </span>
-                                    <span class="pbmit-fid"><sup>k+</sup></span>
+                                    <span class="pbmit-fid">k+</span>
                                   </h4>
                                   <div class="pbmit-fid-title">
                                     Happy Customers Served
@@ -771,7 +772,7 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                       </div>
                     </div>
                     <div
-                      class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-6ff46a4 pbmit-bg-color-over-image"
+                      class="elementor-column elementor-col-25 text-center elementor-top-column elementor-element elementor-element-6ff46a4 pbmit-bg-color-over-image"
                       data-id="6ff46a4" data-element_type="column">
                       <div class="elementor-widget-wrap elementor-element-populated">
                         <div
@@ -789,14 +790,14 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                                   <h4 class="pbmit-fid-inner">
                                     <span class="pbmit-fid"></span>
                                     <span class="pbmit-number-rotate" data-appear-animation="animateDigits"
-                                      data-from="0" data-to="40" data-interval="5" data-before="" data-before-style=""
+                                      data-from="0" data-to="20" data-interval="5" data-before="" data-before-style=""
                                       data-after="" data-after-style="">
-                                      40
+                                     20
                                     </span>
                                     <span class="pbmit-fid"><span>+</span></span>
                                   </h4>
                                   <div class="pbmit-fid-title">
-                                    Culinary Experts Crafting Perfection
+                                   Cuisines
                                   </div>
                                 </div>
                               </div>
@@ -807,7 +808,7 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                       </div>
                     </div>
                     <div
-                      class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-9264e41 pbmit-bg-color-over-image"
+                      class="elementor-column elementor-col-25 text-center elementor-top-column elementor-element elementor-element-9264e41 pbmit-bg-color-over-image"
                       data-id="9264e41" data-element_type="column">
                       <div class="elementor-widget-wrap elementor-element-populated">
                         <div
@@ -842,7 +843,7 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                         </div>
                       </div>
                     </div>
-                    <div
+                    {% comment %} <div
                       class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-902ee48 pbmit-bg-color-over-image"
                       data-id="902ee48" data-element_type="column">
                       <div class="elementor-widget-wrap elementor-element-populated">
@@ -877,7 +878,7 @@ page-template-default page page-id-387 theme-helopizza woocommerce-js pbmit-top-
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> {% endcomment %}
                   </div>
                 </section>
                 <div
