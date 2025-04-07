@@ -295,6 +295,36 @@
     }
   }
 
+  .slick-prev{
+
+      left:-55px;
+  }
+  .slick-next{
+    right:-55px;
+    }
+  
+
+  .slick-prev, .slick-next{
+    height: 50px;
+  width: 50px;
+  font-size: 0;
+  color:black;
+  color:var(--pbmit-helopizza-blackish-color) !important;
+  background-color: transparent;
+  border: 2px solid var(--pbmit-helopizza-blackish-color);
+  -webkit-border-radius:
+    50%;
+    -moz-border-radius: 50%;
+    border-radius:
+    50%;
+}
+.slick-prev::before, .slick-next::before {
+  color:var(--pbmit-helopizza-blackish-color) !important;
+  opacity:1;
+
+
+}
+
 @media (prefers-reduced-motion: reduce) {
     * {
       animation: none !important;

@@ -5826,8 +5826,8 @@ body.rtl .pbmit-countdown-style-1 #main_countedown_1 .time_description {
     display: block !important;
     width: 200px;
     position: fixed;
-    right: 50px;
-    bottom: 50px;
+    right: -10px;
+    bottom: 110px;
     z-index: 10000;
     opacity: 0;
     visibility: hidden;
