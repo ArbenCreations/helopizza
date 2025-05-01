@@ -97,75 +97,13 @@ page-template-default page page-id-386 theme-helopizza woocommerce-js pbmit-top-
                                   The Full Hello Pizza Menu
                                 </h2>
                               </div>
-                              <div class="pbmit-tabs">
-                                <ul class="pbmit-tabs-heading">
-                                  
-                                    {% for category in categories %}
-                                    <li class="pbmit-tab-link col-xl-4  {% if forloop.first %}pbmit-tab-li-active{% endif %}" data-pbmit-tab="{{ category.id }}">
-                                        <div class="pbmit-tabmenu-icon">
-                                            <div class="pbmit-tabmenu-icon-wrapper ">
-                                                <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                                                    <img loading="lazy" src="{{ category.category_image }}" style='
-                                                    width:60px; 
-                                                    height:60px;
-                                                    border-radius:100vh;
-                                                    object-fit:cover;
-                                                    object-position:center;'>
-                                                    {% comment %} <i class="pbmit-helopizza-icon pbmit-helopizza-icon-pizza-1"></i> {% endcomment %}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <span>
-                                            <h3 class="pbminfotech-tabmenu-heading">{{ category.category_name }}</h3>
-                                            <div class="pbminfotech-sep"></div>
-                                        </span>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            
-                                <div class="pbmit-tab-content-wrapper">
-                                    {% for category in categories %}
-                                    <div class="pbmit-tab-content pbmit-tab-content-{{ category.id }} {% if forloop.first %}pbmit-tab-active{% endif %}">
-                                        <div class="pbmit-tab-content-title" data-pbmit-tab="{{ category.id }}">
-                                            <div class="pbmit-tabmenu-icon">
-                                                <div class="pbmit-tabmenu-icon-wrapper">
-                                                    <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                                                        <img loading="lazy" src="{{ category.category_image }}" style='
-                                                        width:60px; 
-                                                        height:60px;
-                                                        border-radius:100vh;
-                                                        object-fit:cover;
-                                                        object-position:center;'>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span>
-                                                <h3 class="pbminfotech-tabmenu-heading">{{ category.category_name }}</h3>
-                                                <div class="pbminfotech-sep"></div>
-                                            </span>
-                                        </div>
-                                        <div class="row multi-columns-row pbmit-tab-content-inner">
-                                            {% for product in products %}
-                                            {% if product.product_category_id == category.id %}
-                                            <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                                <div class="pbmit-ihbox-icon">
-                                                    <img loading="lazy" decoding="async" src="{{ product.image_url }}" alt="{{ product.title }}" />
-                                                </div>
-                                                <div class="pbmit-ihbox-contents">
-                                                    <div class="pbmit-content-inner d-flex">
-                                                        <h2 class="pbmit-element-title">{{ product.title }}</h2>
-                                                        <h4 class="pbmit-element-subtitle">${{ product.price }}</h4>
-                                                    </div>
-                                                    <div class="pbmit-heading-desc">{{ product.short_description }}</div>
-                                                </div>
-                                            </div>
-                                            {% endif %}
-                                            {% endfor %}
-                                        </div>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
+                              <div class="elementor-element elementor-element-54bfa69 elementor-widget elementor-widget-pbmit_tabmenu_element"
+                              data-id="54bfa69" data-element_type="widget"
+                              data-widget_type="pbmit_tabmenu_element.default"
+                              id="menu-container"
+                              >
+                             
+                          </div>
                             </div>
                             <!-- pbminfotech-ele pbminfotech-ele-pricing-table -->
                           </div>

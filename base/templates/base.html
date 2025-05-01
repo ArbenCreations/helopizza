@@ -1646,7 +1646,7 @@ function hidePreloader() {
         </script>
 
 
-    <script>
+    {% comment %} <script>
         $(document).ready(function() {
             // Initialize Slick on tabs heading
             $(".pbmit-tabs-heading").slick({
@@ -1673,8 +1673,153 @@ function hidePreloader() {
                 $(".pbmit-tab-content-" + tabId).addClass("pbmit-tab-active");
             });
         });
+    </script> {% endcomment %}
+
+
+
+    <script src="{% static "assets/js/menuDataManager.js" %}"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            getMenuData().then(({ categories, products }) => {
+              const container = document.getElementById("menu-container");
+          
+              const tabsHeader = categories.map((category, index) => `
+                <li class="pbmit-tab-link col-xl-4 ${index === 0 ? "pbmit-tab-li-active" : ""}"
+                    data-pbmit-tab="${category.id}">
+                  <div class="pbmit-tabmenu-icon">
+                    <div class="pbmit-tabmenu-icon-wrapper">
+                      <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
+                        <img loading="lazy" src="${category.category_image}"
+                          style="width:60px;height:60px;border-radius:100vh;object-fit:cover;object-position:center;">
+                      </div>
+                    </div>
+                  </div>
+                  <span>
+                    <h3 class="pbminfotech-tabmenu-heading">${category.category_name}</h3>
+                    <div class="pbminfotech-sep"></div>
+                  </span>
+                </li>
+              `).join("");
+          
+              const tabContents = categories.map((category, index) => {
+                const filteredProducts = products.filter(p => p.product_category_id == category.id);
+                const productsHtml = filteredProducts.map(product => `
+                  <div class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
+                    <div class="pbmit-ihbox-icon">
+                      <img loading="lazy" decoding="async" src="${product.image_url}" alt="${product.title}" />
+                    </div>
+                    <div class="pbmit-ihbox-contents">
+                      <div class="pbmit-content-inner d-flex">
+                        <h2 class="pbmit-element-title">${product.title}</h2>
+                        <h4 class="pbmit-element-subtitle">$${product.price}</h4>
+                      </div>
+                      <div class="pbmit-heading-desc">${product.short_description}</div>
+                    </div>
+                  </div>
+                `).join("");
+          
+                return `
+                  <div class="pbmit-tab-content pbmit-tab-content-${category.id} ${index === 0 ? "pbmit-tab-active" : ""}">
+                    <div class="pbmit-tab-content-title" data-pbmit-tab="${category.id}">
+                      <div class="pbmit-tabmenu-icon">
+                        <div class="pbmit-tabmenu-icon-wrapper">
+                          <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
+                            <img loading="lazy" src="${category.category_image}"
+                              style="width:60px;height:60px;border-radius:100vh;object-fit:cover;object-position:center;">
+                          </div>
+                        </div>
+                      </div>
+                      <span>
+                        <h3 class="pbminfotech-tabmenu-heading">${category.category_name}</h3>
+                        <div class="pbminfotech-sep"></div>
+                      </span>
+                    </div>
+                    <div class="row multi-columns-row pbmit-tab-content-inner">
+                      ${productsHtml}
+                    </div>
+                  </div>
+                `;
+              }).join("");
+          
+              const finalHTML = `
+                <div class="elementor-widget-container">
+                  <div class="pbminfotech-ele pbminfotech-ele-tab-menu">
+                    <div class="pbmit-tabs">
+                      <ul class="pbmit-tabs-heading">${tabsHeader}</ul>
+                      <div class="pbmit-tab-content-wrapper">${tabContents}</div>
+                    </div>
+                  </div>
+                </div>
+              `;
+          
+              container.innerHTML = finalHTML;
+          
+              // ✅ Initialize Slick AFTER DOM is updated
+              $(".pbmit-tabs-heading").slick({
+                slidesToShow: 6,
+                infinite: false,
+                arrows: true,
+                variableWidth: true,
+                touchThreshold: 10,
+                swipeToSlide: true,
+                draggable: true,
+                mobileFirst: true
+              });
+          
+              // ✅ Re-attach click handler
+              $(".pbmit-tab-link").on("click", function () {
+                var tabId = $(this).attr("data-pbmit-tab");
+          
+                $(".pbmit-tab-link").removeClass("pbmit-tab-li-active");
+                $(this).addClass("pbmit-tab-li-active");
+          
+                $(".pbmit-tab-content").removeClass("pbmit-tab-active");
+                $(".pbmit-tab-content-" + tabId).addClass("pbmit-tab-active");
+              });
+            });
+          });
+          
     </script>
 
+    <script>
+        getMenuData().then(({ banners }) => {
+            const bannerContainer = document.getElementById("banner-container");
+          
+            const topBanners = (banners?.banners || []).slice(0, 2);
+          
+            const bannerHTML = topBanners.map(banner => `
+              <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0cbb7dc pbmit-ihbox-one pbmit-bg-color-over-image"
+                   data-id="0cbb7dc" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                  <div class="elementor-element elementor-element-4370ac8 elementor-widget elementor-widget-pbmit_icon_heading"
+                       data-id="4370ac8" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
+                    <div class="elementor-widget-container">
+                      <div class="pbmit-ihbox pbmit-ihbox-style-3">
+                        <div class="pbmit-ihbox-overlay-image banner">
+                          <img loading="lazy" decoding="async" src="${banner.banner_images_urls[0]}" alt="${banner.title}" />
+                        </div>
+                        <div class="pbmit-ihbox-pattern-image">
+                          <img loading="lazy" decoding="async" src="/assets/media/banner-bg-02.png" alt="${banner.title}" />
+                        </div>
+                        <div class="pbmit-ihbox-contents">
+                          <h4 class="pbmit-element-heading">${banner.title}</h4>
+                          <h2 class="pbmit-element-title">${banner.description}</h2>
+                          <div class="pbmit-svg-btn pbmit-ihbox-btn">
+                            <a href="${banner.url}">Order Now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `).join("");
+          
+            bannerContainer.innerHTML = bannerHTML;
+          });
+          
+</script>
     
 </body>
 

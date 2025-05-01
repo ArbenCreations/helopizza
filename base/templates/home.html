@@ -728,157 +728,10 @@
 <section
     class="elementor-section elementor-top-section elementor-element elementor-element-0ad5ce8 elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
     data-id="0ad5ce8" data-element_type="section" data-settings="{" stretch_section":"section-stretched"}">
-    <div class="elementor-container elementor-column-gap-no gap-xl-0 gap-5">
-        {% for banner in Banners.banners|slice:":2" %}
-        
-        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0cbb7dc pbmit-ihbox-one pbmit-bg-color-over-image"
-        data-id="0cbb7dc" data-element_type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-            <div class="elementor-element elementor-element-4370ac8 elementor-widget elementor-widget-pbmit_icon_heading"
-                data-id="4370ac8" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
-                <div class="elementor-widget-container">
-                    <div class="pbmit-ihbox pbmit-ihbox-style-3">
-                        {% comment %} <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/ihbox-col-bg-01.jpg' %}" alt="Cheesy  Pizza" /></div>
-                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/banner-bg-02.png' %}" alt="Cheesy  Pizza" /></div>
-                            <div class="pbmit-ihbox-icon">
-                                <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                    <img loading="lazy" decoding="async" src="{% static '/assets/media/img-09.png' %}"
-                                        alt="Cheesy  Pizza" />
-                                </div>
-                            </div> {% endcomment %}
-                        <div class="pbmit-ihbox-overlay-image banner"><img loading="lazy" decoding="async"
-                                src="{{banner.banner_images_urls.0}}" alt=" {{banner.title}}"  /></div>
-                                <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/banner-bg-02.png' %}" alt=" {{banner.title}}" /></div>
-                           
-                        <div class="pbmit-ihbox-contents">
-                            <h4 class="pbmit-element-heading">
+    <div class="elementor-container elementor-column-gap-no gap-xl-0 gap-5" id="banner-container"> </div>
 
-                                {{banner.title}}
-
-                            </h4>
-                            <h2 class="pbmit-element-title">
-
-                                {{banner.description}}
-
-                            </h2>
-                            <div class="pbmit-svg-btn pbmit-ihbox-btn"><a href="{{banner.url}}">Order Now</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-        {% endfor %}
-        {% comment %} <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-0cbb7dc pbmit-ihbox-one pbmit-bg-color-over-image"
-            data-id="0cbb7dc" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-4370ac8 elementor-widget elementor-widget-pbmit_icon_heading"
-                    data-id="4370ac8" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
-                    <div class="elementor-widget-container">
-                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
-                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/ihbox-col-bg-01.jpg' %}" alt="Cheesy  Pizza" /></div>
-                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/banner-bg-02.png' %}" alt="Cheesy  Pizza" /></div>
-                            <div class="pbmit-ihbox-icon">
-                                <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                    <img loading="lazy" decoding="async" src="{% static '/assets/media/img-09.png' %}"
-                                        alt="Cheesy  Pizza" />
-                                </div>
-                            </div>
-                            <div class="pbmit-ihbox-contents">
-                                <h4 class="pbmit-element-heading">
-
-                                    Today Special
-
-                                </h4>
-                                <h2 class="pbmit-element-title">
-
-                                    Cheesy Pizza
-
-                                </h2>
-                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a href="">Order Now</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-dcf4392 pbmit-bg-color-over-image"
-            data-id="dcf4392" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-b48fd85 elementor-widget elementor-widget-pbmit_icon_heading"
-                    data-id="b48fd85" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
-                    <div class="elementor-widget-container">
-                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
-                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/ihbox-col-bg-02.jpg' %}" alt="Italian Food" /></div>
-                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/banner-bg-03-new.png' %}" alt="Italian Food" /></div>
-                            <div class="pbmit-ihbox-icon">
-                                <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                    <img loading="lazy" decoding="async" src="{% static '/assets/media/img-08-3.png' %}"
-                                        alt="Italian Food" />
-                                </div>
-                            </div>
-                            <div class="pbmit-ihbox-contents">
-                                <h4 class="pbmit-element-heading">
-
-                                    Best Quality
-
-                                </h4>
-                                <h2 class="pbmit-element-title">
-
-                                    Italian Food
-
-                                </h2>
-                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a href="">Order Now</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-8635fbd pbmit-ihbox-three pbmit-bg-color-over-image"
-            data-id="8635fbd" data-element_type="column">
-            <div class="elementor-widget-wrap elementor-element-populated">
-                <div class="elementor-element elementor-element-6ea9d4b elementor-widget elementor-widget-pbmit_icon_heading"
-                    data-id="6ea9d4b" data-element_type="widget" data-widget_type="pbmit_icon_heading.default">
-                    <div class="elementor-widget-container">
-                        <div class="pbmit-ihbox pbmit-ihbox-style-3">
-                            <div class="pbmit-ihbox-overlay-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/ihbox-col-bg-03.jpg' %}" alt="Hottest  Pizza" /></div>
-                            <div class="pbmit-ihbox-pattern-image"><img loading="lazy" decoding="async"
-                                    src="{% static '/assets/media/banner-bg-04.png' %}" alt="Hottest  Pizza" /></div>
-                            <div class="pbmit-ihbox-icon">
-                                <div class="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                    <img loading="lazy" decoding="async" src="{% static '/assets/media/img-09-3.png' %}"
-                                        alt="Hottest  Pizza" />
-                                </div>
-                            </div>
-                            <div class="pbmit-ihbox-contents">
-                                <h4 class="pbmit-element-heading">
-
-                                    Today Special
-
-                                </h4>
-                                <h2 class="pbmit-element-title">
-
-                                    Hottest Pizza
-
-                                </h2>
-                                <div class="pbmit-svg-btn pbmit-ihbox-btn"><a href="">Order Now</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> {% endcomment %}
-    </div>
 </section>
+
                                 {% comment %} <div class="elementor-section elementor-top-section elementor-element elementor-element-0856cc4 elementor-section-full_width elementor-section-stretched pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-height-default elementor-section-height-default"
                                     data-id="0856cc4" data-element_type="section"
                                     data-settings="{"stretch_section":"section-stretched"}">
@@ -1559,116 +1412,17 @@
                                                 </div>
                                                 <div class="elementor-element elementor-element-54bfa69 elementor-widget elementor-widget-pbmit_tabmenu_element"
                                                     data-id="54bfa69" data-element_type="widget"
-                                                    data-widget_type="pbmit_tabmenu_element.default">
-                                                    <div class="elementor-widget-container">
-
-                                                        <div class="pbminfotech-ele pbminfotech-ele-tab-menu">
-
-                                                            <div
-                                                                class="pbmit-heading-subheading pbmit-reverse-heading-yes">
-                                                            </div>
-                                                            <div class="pbmit-tabs">
-                                                                <ul class="pbmit-tabs-heading">
-                                                                    {% for category in categories %}
-                                                                    <li class="pbmit-tab-link col-xl-4  {% if forloop.first %}pbmit-tab-li-active{% endif %}"
-                                                                        data-pbmit-tab="{{ category.id }}">
-                                                                        <div class="pbmit-tabmenu-icon">
-                                                                            <div class="pbmit-tabmenu-icon-wrapper ">
-                                                                                <div
-                                                                                    class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                                                                                    <img loading="lazy" src="{{ category.category_image }}"
-                                                                                        style='
-                                                                                            width:60px; 
-                                                                                            height:60px;
-                                                                                            border-radius:100vh;
-                                                                                            object-fit:cover;
-                                                                                            object-position:center;'>
-                                                                                    {% comment %} <i
-                                                                                        class="pbmit-helopizza-icon pbmit-helopizza-icon-pizza-1"></i>
-                                                                                    {% endcomment %}
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <span>
-                                                                            <h3 class="pbminfotech-tabmenu-heading">
-                                                                                {{ category.category_name }}</h3>
-                                                                            <div class="pbminfotech-sep"></div>
-                                                                        </span>
-                                                                    </li>
-                                                                    {% endfor %}
-                                                                </ul>
-
-                                                                <div class="pbmit-tab-content-wrapper">
-                                                                    {% for category in categories %}
-                                                                    <div
-                                                                        class="pbmit-tab-content pbmit-tab-content-{{ category.id }} {% if forloop.first %}pbmit-tab-active{% endif %}">
-                                                                        <div class="pbmit-tab-content-title"
-                                                                            data-pbmit-tab="{{ category.id }}">
-                                                                            <div class="pbmit-tabmenu-icon">
-                                                                                <div class="pbmit-tabmenu-icon-wrapper">
-                                                                                    <div
-                                                                                        class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                                                                                        <img loading="lazy" src="{{ category.category_image }}"
-                                                                                            style='
-                                                                                                width:60px; 
-                                                                                                height:60px;
-                                                                                                border-radius:100vh;
-                                                                                                object-fit:cover;
-                                                                                                object-position:center;'>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <span>
-                                                                                <h3 class="pbminfotech-tabmenu-heading">
-                                                                                    {{ category.category_name }}</h3>
-                                                                                <div class="pbminfotech-sep"></div>
-                                                                            </span>
-                                                                        </div>
-                                                                        <div
-                                                                            class="row multi-columns-row pbmit-tab-content-inner">
-                                                                            {% for product in products %}
-                                                                            {% if product.product_category_id == category.id %}
-                                                                            <div
-                                                                                class="pbmit-tabmenu-col col-md-6 d-flex align-items-center">
-                                                                                <div class="pbmit-ihbox-icon">
-                                                                                    <img loading="lazy" decoding="async"
-                                                                                        src="{{ product.image_url }}"
-                                                                                        alt="{{ product.title }}" />
-                                                                                </div>
-                                                                                <div class="pbmit-ihbox-contents">
-                                                                                    <div
-                                                                                        class="pbmit-content-inner d-flex">
-                                                                                        <h2 class="pbmit-element-title">
-                                                                                            {{ product.title }}</h2>
-                                                                                        <h4
-                                                                                            class="pbmit-element-subtitle">
-                                                                                            ${{ product.price }}</h4>
-                                                                                    </div>
-                                                                                    <div class="pbmit-heading-desc">
-                                                                                        {{ product.short_description }}
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            {% endif %}
-                                                                            {% endfor %}
-                                                                        </div>
-                                                                    </div>
-                                                                    {% endfor %}
-                                                                </div>
-                                                            </div>
-
-
-
-                                                        </div>
-                                                        <!-- pbminfotech-ele pbminfotech-ele-pricing-table -->
-
-                                                    </div>
+                                                    data-widget_type="pbmit_tabmenu_element.default"
+                                                    id="menu-container"
+                                                    >
+                                                   
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </section>
 
+                                
 
                                 <section
                                     class="elementor-section py-xl-0 py-4 elementor-top-section elementor-element elementor-element-e932814 elementor-section-content-middle elementor-section-stretched pbmit-bg-img-hide-1 pbmit-col-stretched-none pbmit-cursor-color-blackish-color pbmit-bg-color-over-image elementor-section-boxed elementor-section-height-default elementor-section-height-default"
