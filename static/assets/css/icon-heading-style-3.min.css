@@ -108,8 +108,11 @@ body.rtl .pbmit-ihbox-style-3 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper {
     -webkit-border-radius: 36px;
     -moz-border-radius: 36px;
     border-radius: 36px;
-    color: var(--pbmit-helopizza-white-color);
-    border: 2px solid var(--pbmit-helopizza-white-color)
+    color: #5e0009;
+    border: 2px solid var(--pbmit-helopizza-white-color);
+    background: #ffffff7a;
+    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(50px);
 }
 
 .pbmit-ihbox-style-3 .pbmit-ihbox-btn a:hover {

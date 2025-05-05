@@ -631,7 +631,19 @@
             font-weight:bold;
             align-items:center;
         }
+        .pbminfotech-ele-tab-menu span h3{
+            -webkit-line-clamp: 2 !important;
+        }
+        .pbminfotech-ele-tab-menu .pbmit-tab-link{
+            height:160px !important;
+        }
         @media screen and (max-width:500px){
+            .pbminfotech-ele-tab-menu span h3{
+                -webkit-line-clamp: 1 !important;
+            }
+            .pbminfotech-ele-tab-menu .pbmit-tab-link{
+                height:auto !important;
+            }
             .section2{
                
                 border-radius:15px;
@@ -1686,7 +1698,12 @@ function hidePreloader() {
         document.addEventListener('DOMContentLoaded', () => {
             getMenuData().then(({ categories, products }) => {
               const container = document.getElementById("menu-container");
-          
+                
+              categories.sort((a, b) => {
+                const aPizza = a.category_name.toLowerCase().includes("pizza") ? 0 : 1;
+                const bPizza = b.category_name.toLowerCase().includes("pizza") ? 0 : 1;
+                return aPizza - bPizza;
+              });
               const tabsHeader = categories.map((category, index) => `
                 <li class="pbmit-tab-link col-xl-4 ${index === 0 ? "pbmit-tab-li-active" : ""}"
                     data-pbmit-tab="${category.id}">
@@ -1803,7 +1820,7 @@ function hidePreloader() {
                           <img loading="lazy" decoding="async" src="${banner.banner_images_urls[0]}" alt="${banner.title}" />
                         </div>
                         <div class="pbmit-ihbox-pattern-image">
-                          <img loading="lazy" decoding="async" src="/assets/media/banner-bg-02.png" alt="${banner.title}" />
+                          <img loading="lazy" decoding="async" src="{% static "/assets/media/banner-bg-02.png" %}" alt="${banner.title}" />
                         </div>
                         <div class="pbmit-ihbox-contents">
                           <h4 class="pbmit-element-heading">${banner.title}</h4>
