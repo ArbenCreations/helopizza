@@ -45,7 +45,7 @@ def contact(request):
                 subject,
                 message,
                 'pricetrackerprod@gmail.com',  # Sender email
-                ['hamu.dhillon@gmail.com'],  # Recipient email
+                ['hellopizzaalberta@gmail.com'],  # Recipient email
                 fail_silently=False,
             )
             return JsonResponse({"status": "success", "message": "Your message has been sent successfully!"})
